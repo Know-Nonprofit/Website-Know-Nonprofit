@@ -1,0 +1,40 @@
+---
+import TechLogo from "@molecules/TechLogo.astro";
+
+interface Props {
+  title: string;
+  items: string[];
+}
+
+const { title, items } = Astro.props;
+
+// Duplicamos logos para loop seamless
+const allItems = [...items, ...items];
+---
+
+<section class="py-16 bg-background border-y border-outline-variant overflow-hidden">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <h3 class="font-inter text-sm font-semibold text-center text-on-surface-variant uppercase tracking-widest mb-10">{title}</h3>
+  </div>
+  
+  <div id="logo-carousel" class="flex gap-16 w-max">
+    {allItems.map(item => (
+      <TechLogo name={item} />
+    ))}
+  </div>
+</section>
+
+<script>
+  import { animate } from "motion";
+  
+  const carousel = document.getElementById("logo-carousel");
+  if (carousel) {
+    const halfWidth = carousel.scrollWidth / 2;
+    
+    animate(
+      carousel,
+      { x: [0, -halfWidth] },
+      { duration: 40, ease: "linear", repeat: Infinity }
+    );
+  }
+</script>

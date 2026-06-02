@@ -1,0 +1,17 @@
+---
+import Icon from "@atoms/Icon.astro";
+
+interface Props {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+const { icon, title, desc } = Astro.props;
+---
+
+<div class="bg-white p-8 border border-outline-variant rounded-xl flex flex-col items-start hover:border-secondary transition-colors group">
+  <Icon name={icon} size={40} class="text-secondary mb-6 group-hover:scale-110 transition-transform" />
+  <h3 class="font-inter text-2xl font-semibold text-primary mb-4">{title}</h3>
+  <p class="text-on-surface-variant font-inter text-base">{desc}</p>
+</div>

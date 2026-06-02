@@ -1,0 +1,98 @@
+---
+import Icon from "@atoms/Icon.astro"
+
+interface Item {
+  icon: string
+  text: string
+}
+
+interface Card {
+  title: string
+  desc: string
+}
+
+interface Step {
+  number: string
+  title: string
+  desc: string
+}
+
+interface Props {
+  id: string
+  icon: string
+  title: string
+  highlighted?: boolean
+  content?: string
+  intro?: string
+  items?: Item[]
+  cards?: Card[]
+  steps?: Step[]
+}
+
+const { id, icon, title, highlighted = false, content, intro, items, cards, steps } = Astro.props
+
+const hl = highlighted
+const wrap = hl ? "bg-primary text-on-primary shadow-lg" : "bg-white border border-outline-variant"
+const iconCls = hl ? "text-white" : "text-primary"
+const headingCls = hl ? "text-white" : "text-on-surface"
+const textCls = hl ? "text-primary-fixed" : "text-on-surface-variant"
+const mutedCls = hl ? "text-white opacity-50" : "text-on-surface opacity-50"
+const cardWrap = hl ? "bg-white/10 border-white/20" : "bg-surface-container-low border-outline-variant/30"
+const cardTitle = hl ? "text-white" : "text-secondary"
+const itemIconCls = hl ? "text-white mt-1" : "text-secondary mt-1"
+const stepNumCls = hl ? "text-white opacity-50" : "text-on-surface opacity-50"
+const stepHeading = hl ? "text-white" : "text-on-surface"
+---
+
+<div id={id} class={`p-6 md:p-8 rounded-xl ${wrap}`}>
+  <div class="flex items-center gap-3 mb-4">
+    <Icon name={icon} size={28} class={iconCls} />
+    <h2 class={`font-inter text-xl font-bold ${headingCls}`}>{title}</h2>
+  </div>
+
+  {content && (
+    <p class={`font-inter text-base leading-relaxed ${textCls}`}>{content}</p>
+  )}
+
+  {intro && (
+    <p class={`font-inter text-base mb-4 leading-relaxed ${textCls}`}>{intro}</p>
+  )}
+
+  {items && (
+    <ul class="space-y-3">
+      {items.map(item => (
+        <li class="flex items-start gap-3">
+          <Icon name={item.icon} size={20} class={itemIconCls} />
+          <span class={`font-inter text-base ${textCls}`}>
+            <Fragment set:html={item.text} />
+          </span>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  {cards && (
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {cards.map(card => (
+        <div class={`p-4 rounded-lg border ${cardWrap}`}>
+          <h3 class={`font-inter text-sm font-semibold mb-1 ${cardTitle}`}>{card.title}</h3>
+          <p class={`font-inter text-sm ${textCls}`}>{card.desc}</p>
+        </div>
+      ))}
+    </div>
+  )}
+
+  {steps && (
+    <div class="space-y-4">
+      {steps.map(step => (
+        <div class="flex gap-4">
+          <span class={`font-inter text-2xl font-bold ${stepNumCls}`}>{step.number}</span>
+          <div>
+            <h4 class={`font-inter text-sm font-semibold mb-1 ${stepHeading}`}>{step.title}</h4>
+            <p class={`font-inter text-sm ${textCls}`}>{step.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</div>

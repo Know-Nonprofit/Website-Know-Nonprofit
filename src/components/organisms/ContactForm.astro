@@ -1,0 +1,312 @@
+---
+import FormField from "@molecules/FormField.astro";
+import Button from "@atoms/Button.astro";
+
+interface Field {
+  name: string;
+  label: string;
+  type: string;
+  placeholder?: string;
+  options?: string[];
+}
+
+interface Props {
+  form: {
+    title: string;
+    subtitle: string;
+    fields: Field[];
+    cta: string;
+    note: string;
+    messages: {
+      sending: string;
+      success: string;
+      successDesc: string;
+      rateLimitTitle: string;
+      rateLimitDesc: string;
+      fieldErrorTitle: string;
+      fieldErrorDesc: string;
+      networkErrorTitle: string;
+      networkErrorDesc: string;
+      required: string;
+      invalidEmail: string;
+    };
+  };
+}
+
+const { form } = Astro.props;
+const textFields = form.fields.filter(f => f.type !== "select" && f.type !== "textarea");
+const selectFields = form.fields.filter(f => f.type === "select");
+const textareaFields = form.fields.filter(f => f.type === "textarea");
+const msgs = JSON.stringify(form.messages);
+---
+
+<section class="py-20 bg-background relative overflow-hidden" id="contacto">
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-surface-container-low -skew-x-12 translate-x-1/2 opacity-50 z-0"></div>
+  <div class="max-w-[1200px] mx-auto px-4 md:px-margin-desktop relative z-10">
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-16 border border-outline-variant rounded-xl shadow-sm">
+      <div class="text-center mb-12">
+        <h2 class="font-inter text-3xl font-semibold text-primary mb-4">{form.title}</h2>
+        <p class="text-on-surface-variant max-w-lg mx-auto">{form.subtitle}</p>
+      </div>
+      
+      <!-- Error summary (visible when validation fails) -->
+      <div id="form-error-summary" class="hidden bg-error-container border border-error rounded-xl p-4 mb-6" role="alert">
+        <p class="font-inter font-semibold text-on-error-container" id="form-error-title"></p>
+        <p class="font-inter text-sm text-on-error-container mt-1" id="form-error-desc"></p>
+      </div>
+      
+      <form class="space-y-6" id="contact-form" novalidate method="post" data-messages={msgs}>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {textFields.map(field => (
+            <FormField {...field} required={field.name !== "web" && field.name !== "website"} />
+          ))}
+          {selectFields.map(field => (
+            <FormField {...field} required={field.name !== "web" && field.name !== "website"} />
+          ))}
+        </div>
+        {textareaFields.map(field => (
+          <FormField {...field} required={field.name !== "web" && field.name !== "website"} />
+        ))}
+        <Button variant="cta" size="lg" type="submit" class="w-full bg-[#C05621] py-5 text-lg font-bold">
+          {form.cta}
+        </Button>
+        <p class="text-center italic text-on-surface-variant text-sm mt-6">
+          {form.note}
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Toast notification -->
+<div id="form-toast" class="fixed bottom-6 right-6 z-50 max-w-sm transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" role="alert">
+  <div class="bg-surface-container-high border border-outline-variant rounded-xl shadow-lg p-4 flex items-start gap-3">
+    <span id="toast-icon" class="text-2xl"></span>
+    <div class="flex-1">
+      <p id="toast-title" class="font-inter font-semibold text-on-surface"></p>
+      <p id="toast-message" class="font-inter text-sm text-on-surface-variant mt-1"></p>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    function init() {
+      var form = document.getElementById("contact-form")
+      if (!form) {
+        console.error("[ContactForm] Form element not found")
+        return
+      }
+
+      // Read messages from data attribute
+      var messages = {}
+      var msgsAttr = form.getAttribute("data-messages")
+      if (msgsAttr) {
+        try {
+          messages = JSON.parse(msgsAttr)
+        } catch (e) {
+          console.error("[ContactForm] Failed to parse messages:", e)
+        }
+      }
+      console.log("[ContactForm] Messages loaded:", Object.keys(messages))
+
+      var btn = form.querySelector("button[type='submit']")
+      var toast = document.getElementById("form-toast")
+      var toastTitle = document.getElementById("toast-title")
+      var toastMessage = document.getElementById("toast-message")
+      var toastIcon = document.getElementById("toast-icon")
+      var errorSummary = document.getElementById("form-error-summary")
+      var errorTitle = document.getElementById("form-error-title")
+      var errorDesc = document.getElementById("form-error-desc")
+      var toastTimeout = null
+      var originalText = btn ? btn.innerText : "Enviar"
+
+      function validate(data) {
+        var errors = {}
+        var optional = { "web": true, "website": true }
+
+        for (var key in data) {
+          if (optional[key]) continue
+          var val = data[key]
+          if (!val || (typeof val === "string" && val.trim() === "")) {
+            errors[key] = "required"
+          }
+        }
+
+        var email = data.email
+        if (typeof email === "string" && email.trim() !== "") {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+            errors.email = "invalid_email"
+          }
+        }
+
+        return { ok: Object.keys(errors).length === 0, errors: errors }
+      }
+
+      function clearErrors() {
+        // Clear inline field errors
+        var errorEls = document.querySelectorAll(".field-error")
+        for (var i = 0; i < errorEls.length; i++) {
+          errorEls[i].classList.add("hidden")
+          errorEls[i].textContent = ""
+        }
+        // Hide error summary
+        if (errorSummary) errorSummary.classList.add("hidden")
+        if (errorTitle) errorTitle.textContent = ""
+        if (errorDesc) errorDesc.textContent = ""
+        // Hide toast
+        hideToast()
+      }
+
+      function showFieldErrors(errors) {
+        for (var field in errors) {
+          var wrapper = document.querySelector('[data-formfield="' + field + '"]')
+          if (!wrapper) {
+            console.warn("[ContactForm] Wrapper not found for field:", field)
+            continue
+          }
+          var errorEl = wrapper.querySelector(".field-error")
+          if (!errorEl) {
+            console.warn("[ContactForm] Error element not found for field:", field)
+            continue
+          }
+          var code = errors[field]
+          var msg = (code === "invalid_email") ? messages.invalidEmail : messages.required
+          if (!msg) msg = (code === "invalid_email") ? "Email inválido" : "Campo requerido"
+          errorEl.textContent = msg
+          errorEl.classList.remove("hidden")
+          console.log("[ContactForm] Showing error for", field, ":", msg)
+        }
+      }
+
+      function showErrorSummary(title, desc) {
+        if (errorSummary) {
+          errorSummary.classList.remove("hidden")
+          if (errorTitle) errorTitle.textContent = title || "Error"
+          if (errorDesc) errorDesc.textContent = desc || ""
+        }
+        // Scroll to error summary
+        errorSummary?.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
+
+      function showToast(type, title, message) {
+        if (!toast || !toastTitle || !toastMessage || !toastIcon) return
+        clearTimeout(toastTimeout)
+        toastTitle.textContent = title || ""
+        toastMessage.textContent = message || ""
+        toastIcon.textContent = (type === "success") ? "✅" : "⚠️"
+        toast.classList.remove("translate-y-20", "opacity-0", "pointer-events-none")
+        toast.classList.add("translate-y-0", "opacity-100")
+        toastTimeout = setTimeout(function() {
+          hideToast()
+        }, 6000)
+      }
+
+      function hideToast() {
+        if (!toast) return
+        toast.classList.add("translate-y-20", "opacity-0", "pointer-events-none")
+        toast.classList.remove("translate-y-0", "opacity-100")
+      }
+
+      console.log("[ContactForm] Attaching submit listener")
+
+      form.addEventListener("submit", function(e) {
+        console.log("[ContactForm] Submit triggered")
+        e.preventDefault()
+        e.stopPropagation()
+
+        clearErrors()
+
+        var data = Object.fromEntries(new FormData(e.target))
+        console.log("[ContactForm] Form data:", data)
+
+        var validation = validate(data)
+        console.log("[ContactForm] Validation result:", validation)
+
+        if (!validation.ok) {
+          console.log("[ContactForm] Validation failed, showing errors")
+          showFieldErrors(validation.errors)
+          showErrorSummary(
+            messages.fieldErrorTitle || "Error en el formulario",
+            messages.fieldErrorDesc || "Revisa los campos marcados"
+          )
+          showToast(
+            "error",
+            messages.fieldErrorTitle || "Error",
+            messages.fieldErrorDesc || "Revisa los campos marcados"
+          )
+          return false
+        }
+
+        console.log("[ContactForm] Validation passed, sending to server")
+        if (btn) {
+          btn.disabled = true
+          btn.innerText = messages.sending || "Enviando..."
+        }
+
+        fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }).then(function(res) {
+          return res.json().then(function(json) {
+            console.log("[ContactForm] Server response:", res.status, json)
+
+            if (res.status === 429) {
+              showErrorSummary(
+                messages.rateLimitTitle || "Demasiadas peticiones",
+                messages.rateLimitDesc || "Espera un minuto"
+              )
+              showToast("error",
+                messages.rateLimitTitle || "Error",
+                messages.rateLimitDesc || "Demasiadas peticiones"
+              )
+            } else if (res.status === 400 && json.errors) {
+              showFieldErrors(json.errors)
+              showErrorSummary(
+                messages.fieldErrorTitle || "Error en el formulario",
+                messages.fieldErrorDesc || "Revisa los campos"
+              )
+              showToast("error",
+                messages.fieldErrorTitle || "Error",
+                messages.fieldErrorDesc || "Revisa los campos"
+              )
+            } else if (json.ok) {
+              showToast("success",
+                messages.success || "¡Enviado!",
+                messages.successDesc || "Solicitud enviada"
+              )
+              e.target.reset()
+            } else {
+              showErrorSummary("Error", "No se pudo procesar la solicitud")
+              showToast("error", "Error", "No se pudo procesar la solicitud")
+            }
+          })
+        }).catch(function(err) {
+          console.error("[ContactForm] Network error:", err)
+          showErrorSummary(
+            messages.networkErrorTitle || "Error de red",
+            messages.networkErrorDesc || "Intenta de nuevo"
+          )
+          showToast("error",
+            messages.networkErrorTitle || "Error",
+            messages.networkErrorDesc || "Error de conexión"
+          )
+        }).finally(function() {
+          if (btn) {
+            btn.disabled = false
+            btn.innerText = originalText
+          }
+        })
+
+        return false
+      })
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init)
+    } else {
+      init()
+    }
+  })()
+</script>

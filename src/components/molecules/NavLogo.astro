@@ -1,0 +1,14 @@
+---
+interface Props {
+  icon: string;
+  text: string;
+  class?: string;
+}
+
+const { icon, text, class: className = "" } = Astro.props;
+---
+
+<div class={`flex items-center gap-2 ${className}`}>
+  <span class="text-primary" style="font-size: 28px;">{icon}</span>
+  <span class="font-inter text-xl font-bold text-primary">{text}</span>
+</div>
