@@ -1,0 +1,66 @@
+{
+  "pageTitle": "Política de Cookies | SustainSoft",
+  "hero": {
+    "badge": "Transparencia",
+    "title": "Política de Cookies",
+    "subtitle": "En SustainSoft utilizamos cookies y tecnologías similares para mejorar su experiencia de navegación y ofrecerle contenido personalizado. Esta política explica qué cookies usamos y cómo puede gestionarlas.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk8fIpK-Sd8TTDLS2hjs0V35_gQZ8oQK9fEMw1w8p3SuaJQnNijgEnKBIqQV8DAquCRoPVihmU_m8eVfSPHlYPE4BVXYL8cjcKiNOgDQKS2JTjUyE_gcsJUNX8efB8weVai_DLGSbLQl0rCLUU3C5MMsnWj3IvXyOeEEgGX5bhIIKAlWWgFHIQkVxrYhRRXCFnavK5lw43UTalYb9ZBF98cLMQ0gUXIqM8MimWgph48hJgkILZajMV2rHGjz_KgyXioGyf1POtIfA"
+  },
+  "sidebar": [
+    { "label": "1. ¿Qué son las cookies?", "href": "#que-son" },
+    { "label": "2. Tipos de cookies", "href": "#tipos" },
+    { "label": "3. Cookies que utilizamos", "href": "#utilizamos" },
+    { "label": "4. Gestión de cookies", "href": "#gestion" },
+    { "label": "5. Cambios en la política", "href": "#cambios" }
+  ],
+  "sections": [
+    {
+      "id": "que-son",
+      "icon": "Cookie",
+      "title": "1. ¿Qué son las cookies?",
+      "content": "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio web. Estas cookies permiten que el sitio recuerde sus acciones y preferencias durante un período de tiempo, para que no tenga que volver a introducirlas cada vez que regrese al sitio o navegue entre páginas."
+    },
+    {
+      "id": "tipos",
+      "icon": "Layers",
+      "title": "2. Tipos de cookies",
+      "intro": "Existen diferentes tipos de cookies según su propósito y duración:",
+      "items": [
+        { "icon": "CheckCircle", "text": "**Cookies técnicas:** Son esenciales para el funcionamiento del sitio web y no pueden desactivarse. Incluyen funciones como la navegación por páginas y el acceso a áreas seguras." },
+        { "icon": "CheckCircle", "text": "**Cookies de preferencias:** Permiten al sitio web recordar información que cambia la forma en que se comporta o se ve, como su idioma preferido o la región en la que se encuentra." },
+        { "icon": "CheckCircle", "text": "**Cookies de análisis:** Nos ayudan a entender cómo interactúan los visitantes con el sitio web, recopilando y reportando información de forma anónima." },
+        { "icon": "CheckCircle", "text": "**Cookies de marketing:** Se utilizan para rastrear a los visitantes en los sitios web con el fin de mostrar anuncios relevantes y atractivos." }
+      ]
+    },
+    {
+      "id": "utilizamos",
+      "icon": "BarChart3",
+      "title": "3. Cookies que utilizamos",
+      "intro": "En SustainSoft utilizamos las siguientes categorías de cookies:",
+      "cards": [
+        { "title": "Cookies esenciales", "desc": "Necesarias para el funcionamiento básico del sitio, como la autenticación y la seguridad." },
+        { "title": "Cookies de rendimiento", "desc": "Nos ayudan a mejorar el rendimiento del sitio web identificando errores y problemas de carga." },
+        { "title": "Cookies funcionales", "desc": "Permiten funcionalidades mejoradas como videos incrustados y preferencias de usuario." },
+        { "title": "Cookies analíticas", "desc": "Utilizamos Google Analytics para entender el tráfico y mejorar nuestros servicios." }
+      ]
+    },
+    {
+      "id": "gestion",
+      "icon": "Settings",
+      "title": "4. Gestión de cookies",
+      "intro": "Usted puede controlar y gestionar las cookies de diversas formas:",
+      "steps": [
+        { "number": "01", "title": "Configuración del navegador", "desc": "La mayoría de los navegadores permiten ver, gestionar, eliminar y bloquear cookies a través de su configuración de privacidad." },
+        { "number": "02", "title": "Panel de preferencias", "desc": "Puede acceder a nuestro panel de cookies en cualquier momento para modificar sus preferencias de consentimiento." },
+        { "number": "03", "title": "Herramientas de terceros", "desc": "Existen extensiones de navegador y herramientas que le permiten gestionar cookies de manera centralizada." }
+      ]
+    }
+  ],
+  "contact": {
+    "id": "cambios",
+    "title": "5. Cambios en la política",
+    "subtitle": "Podemos actualizar esta política de cookies ocasionalmente para reflejar cambios en las tecnologías que utilizamos. Si tiene preguntas sobre nuestra política de cookies, no dude en contactarnos.",
+    "email": "privacy@sustainsaft.org",
+    "emailLabel": "privacy@sustainsaft.org"
+  }
+}

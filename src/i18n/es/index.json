@@ -1,0 +1,106 @@
+{
+  "tokens": {
+    "cta": "#C05621",
+    "quoteBg": "#ffffff"
+  },
+  "hero": {
+    "title": "Su fundación merece operar con la misma estructura que cualquier organización profesional.",
+    "subtitle": "Soy consultor independiente de desarrollo de software. Trabajo con fundaciones y ONGs en Latinoamérica para diagnosticar, diseñar y construir los sistemas que necesitan para dejar de operar en el caos.",
+    "cta": "Hablar sobre mi fundación",
+    "ctaSecondary": "Ver proyectos",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD9K_C9FrOjdBzyHmGkK4bWAKxSYlnP-SLE8U7N2jnF08E3FfGq77Ecu9NQDip3jf-smvu_-GcrVrbxsObYJ1JuAk1ZXaRnvCj3aP6Kj4OBjW2T7tE5f4Odj2GN3-U9-Ch3mnpOzQHAfpCQ8ol8qG5P7vdtex6dPf8LXYe8zbKHaf92KGQRZBxBXf4VIYTrqzCnO4QGPawiicyW1IOKSHq7xF4mV2qD7-awQPeZ-k8qsHgeaYWtMJV7mMDNxz2H5_PMmXILk9MESoU",
+    "badge": {
+      "icon": "TrendingUp",
+      "text": "Estandarización de procesos regionales"
+    }
+  },
+  "painPoints": {
+    "title": "Si llegó hasta aquí, probablemente reconoce alguna de estas situaciones.",
+    "items": [
+      { "icon": "AlertCircle", "title": "Caos de datos", "desc": "Información fragmentada en múltiples archivos de Excel que nunca coinciden entre sí." },
+      { "icon": "TimerOff", "title": "Reportes lentos", "desc": "Días de trabajo manual solo para generar un reporte de impacto para sus donantes." },
+      { "icon": "RotateCcw", "title": "Falta de procesos", "desc": "Cada miembro del equipo tiene su propia 'manera' de guardar y procesar la información." },
+      { "icon": "TrendingDown", "title": "Crecimiento sin base", "desc": "La fundación crece en impacto pero la infraestructura administrativa está al borde del colapso." },
+      { "icon": "CreditCard", "title": "Costos técnicos", "desc": "Contratar un equipo de IT de planta es financieramente inviable para el presupuesto anual." },
+      { "icon": "Compass", "title": "Falta de guía", "desc": "Saben que necesitan tecnología, pero no saben por dónde empezar ni qué herramientas elegir." }
+    ],
+    "cta": "Hablar sobre mi fundación"
+  },
+  "valueProp": {
+    "title": "Consultoría de software para organizaciones que hacen trabajo real.",
+    "subtitle": "Soy un consultor independiente especializado en el sector social. Trabajo directamente con el director o el equipo operativo para entender cómo funciona la organización. No vendo software de caja; construyo soluciones que se adaptan a su realidad, no al revés.",
+    "features": [
+      "Atención personalizada sin intermediarios",
+      "Experiencia específica en contextos Latinoamericanos",
+      "Enfoque en herramientas de bajo costo y alta escalabilidad"
+    ],
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCArqKSH4Hw1WrYQzy0cR3g6WdOIykpGsowuEF4gY0vZMIBKuM8WqnU4Vw9vIZMBt-n_qkNACnm67KXeZZGswBkmEwLIdV9V-hklh9uImnlHKxGCQnLdNN0C67X2Ep08BsE-n19LYKiVFVLZTT5-IMCoN2C89a78GBkjgfLQvUj9qGW6BtbWWvRuX9z3JNvvPpoPL6hi629nNwbRZEW88NzcpgTV-3wedgfbKjzA-9k6_ETdPObg3_Pirr4Ntr_D0vhp2OkXBpmhxA",
+    "quote": {
+      "text": "Dejamos de apagar fuegos operativos para enfocarnos en nuestra misión.",
+      "author": "Director Regional, NGO Partner"
+    }
+  },
+  "process": {
+    "title": "Cómo trabajo",
+    "subtitle": "Un proceso estructurado para garantizar resultados medibles.",
+    "steps": [
+      { "title": "Diagnóstico", "desc": "Auditamos sus procesos actuales, identificamos cuellos de botella y fugas de información crítica." },
+      { "title": "Diseño", "desc": "Diseñamos la arquitectura técnica: diagramas de flujo de datos y selección de herramientas adecuadas." },
+      { "title": "Desarrollo", "desc": "Construcción iterativa de la solución. Ustedes prueban cada avance en entornos reales." },
+      { "title": "Entrega", "desc": "Capacitación del equipo, documentación técnica y soporte para asegurar la adopción total." }
+    ]
+  },
+  "techLogos": {
+    "title": "Herramientas que ya conoce su equipo",
+    "items": ["Google Workspace", "Notion", "Airtable", "Trello", "Slack", "Looker Studio", "Google Sheets", "Zapier", "Make", "Google Apps Script", "Mailchimp", "Typeform"]
+  },
+  "services": {
+    "title": "Lo que construyo",
+    "items": [
+      { "icon": "Smartphone", "title": "Aplicaciones móviles", "desc": "Captura de datos en campo para censos o monitoreo de programas sociales, incluso sin conexión a internet." },
+      { "icon": "Settings", "title": "Software interno a medida", "desc": "Sistemas de gestión de inventarios, CRM para donantes o plataformas de coordinación de voluntarios." },
+      { "icon": "BarChart3", "title": "Dashboards de impacto", "desc": "Visualización automatizada de KPIs y métricas de impacto social para rendición de cuentas y toma de decisiones." },
+      { "icon": "Zap", "title": "Automatización de procesos", "desc": "Conexión de sus herramientas actuales para eliminar tareas manuales repetitivas y reducir el error humano." }
+    ],
+    "cta": "Hablar sobre mi fundación"
+  },
+  "projects": {
+    "title": "Trabajo con ellos",
+    "items": [
+      { "country": "Colombia", "title": "Fundación Raíces", "desc": "Sistema centralizado para el seguimiento de programas educativos en zonas rurales.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAKXPujxic47MTetJc1wrXL7wrIOv1MDy-fIHqr0jsL3bpm7gWxx68Kc8VjDLa-GwVu3ixzr9GzKN7fB-fXIO96C0ya9oUMqyPZ0TGnsNkuTdEUyjuZT1CYzjtAnSX-o9RbdzW-Cu6_MmNylNoAMnFXWh1rMFPzrCXym5c6aMy6WuQOCsRyGYksX5vJZ9jCX5MbflRvnMivRO8vwXRc0f2BYlFaLgjGYc_vno9LfXOsrQgqITw5Rb4Z9sTlkP-Nr2rTY-u_v-JddAY", "link": "Ver más" },
+      { "country": "México", "title": "ONG Semilla Viva", "desc": "App móvil para el registro de cultivos y asistencia técnica a pequeños productores.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBeiUqZr_YA4n8JWUcIunxA-HAZc1i57qVytL0nmYTB9hTmlTSJMcuee_IonBMIHJ0kNv_LwsVgbJHJ_CAXqT8Xwe4tqeUyFkkgCv2_o2tY_1Zq_VaiCwVOBsXLSAKsMLliwnmGUWLVpssrtezlqs9tDPFTudsz0ryOnHyqB3UGDleHyGNubo6RiSnVB_GiBWVDtONVtFnJZoednd465da5epVgE6i6lwpXqo44oSYtTDI7TXAwC5nYkTZ7SxA_magkoIjyAJ-pr-Q", "link": "Ver más" },
+      { "country": "Perú", "title": "Fundación Avanza", "desc": "Dashboard de impacto nacional para programas de salud materno-infantil.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC-U9viyBIrrMF8kzF4yRChePwBvEhHAuncoa5QlFCu7qOA8Jg7eeR54y9i7juiRqPtLAlAvhEPY3l-h96KE1adoSfuPLIrioH3iobtaxj2PbiSfcST1nTM7rVUadRNi9OJEMM6WMEz3v8vTjwsaZWBKiwMOE3xTM35CO9578SLTs95j9AsTWAlKZM9xlCuEbJw9M9Ka7yAlzcSvDlqncxrP-baz_UUn1BasxlmSUqBLnM_dqphjVwpMuZElW2vTG9ofyucN4gvJl4", "link": "Ver más" },
+      { "country": "Argentina", "title": "Colectivo Tejido", "desc": "Plataforma de gestión de donaciones y red de voluntariado urbano.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCC-h0FrrnlFHtx9TNze9K-EQnKc76-XQEDixmbK8KsUtyQAE3LW5n3tYr6xbb3JXWcZkkXJb3011gQjIYP5-8Wu_6J6TXclc6nhjKfr1MpdNXq6Dp7AwBnQ4mPKwksfgdtUvREMHOpeCzNNj03sFIwDkn4hQ4DoydDSvuzsW4mUs0J-1URhLKsw00TN-xRtSO6L2FvFmNizI7DmvZbsr-tXyRgKP844wyWGkl5Oc8Fd88wNuFJ9NZRvoFX0D2eeP5YydVuT5VojNU", "link": "Ver más" }
+    ]
+  },
+  "form": {
+    "title": "¿Su organización está lista para operar diferente?",
+    "subtitle": "Complete el formulario y analicemos cómo la tecnología puede escalar su impacto.",
+    "fields": [
+      { "name": "nombre", "label": "Nombre", "type": "text", "placeholder": "Ej. Ana García" },
+      { "name": "cargo", "label": "Cargo", "type": "text", "placeholder": "Ej. Directora Ejecutiva" },
+      { "name": "fundacion", "label": "Fundación / ONG", "type": "text", "placeholder": "Nombre legal" },
+      { "name": "pais", "label": "País", "type": "text", "placeholder": "Ej. Colombia" },
+      { "name": "email", "label": "Correo electrónico", "type": "email", "placeholder": "ana@fundacion.org" },
+      { "name": "web", "label": "Sitio Web", "type": "url", "placeholder": "https://..." },
+      { "name": "equipo", "label": "Tamaño de equipo", "type": "select", "options": ["1-10 personas", "11-50 personas", "51-200 personas", "Más de 200"] },
+      { "name": "presupuesto", "label": "Presupuesto aproximado (USD)", "type": "select", "options": ["USD 2,000 - 5,000", "USD 5,000 - 15,000", "USD 15,000+", "Por definir"] },
+      { "name": "problema", "label": "¿Cuál es el principal problema de software que enfrentan hoy?", "type": "textarea", "placeholder": "Describa el caos actual..." }
+    ],
+    "cta": "Enviar solicitud",
+    "note": "Reviso cada solicitud de forma personal. Si hay un buen punto de partida, le respondo en menos de 72 horas.",
+    "messages": {
+      "sending": "Enviando...",
+      "success": "¡Enviado!",
+      "successDesc": "Revisaremos tu solicitud y responderemos en menos de 72 horas.",
+      "rateLimitTitle": "Límite alcanzado",
+      "rateLimitDesc": "Demasiadas solicitudes. Espera 1 minuto.",
+      "fieldErrorTitle": "Revisa los campos",
+      "fieldErrorDesc": "Algunos campos obligatorios están vacíos o son inválidos.",
+      "networkErrorTitle": "Error de red",
+      "networkErrorDesc": "No se pudo enviar la solicitud. Intenta de nuevo.",
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "El correo electrónico no es válido"
+    }
+  }
+}

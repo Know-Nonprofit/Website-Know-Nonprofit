@@ -1,0 +1,66 @@
+{
+  "pageTitle": "Cookie Policy | SustainSoft",
+  "hero": {
+    "badge": "Transparency",
+    "title": "Cookie Policy",
+    "subtitle": "At SustainSoft, we use cookies and similar technologies to improve your browsing experience and provide personalized content. This policy explains what cookies we use and how you can manage them.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk8fIpK-Sd8TTDLS2hjs0V35_gQZ8oQK9fEMw1w8p3SuaJQnNijgEnKBIqQV8DAquCRoPVihmU_m8eVfSPHlYPE4BVXYL8cjcKiNOgDQKS2JTjUyE_gcsJUNX8efB8weVai_DLGSbLQl0rCLUU3C5MMsnWj3IvXyOeEEgGX5bhIIKAlWWgFHIQkVxrYhRRXCFnavK5lw43UTalYb9ZBF98cLMQ0gUXIqM8MimWgph48hJgkILZajMV2rHGjz_KgyXioGyf1POtIfA"
+  },
+  "sidebar": [
+    { "label": "1. What are cookies?", "href": "#what-are" },
+    { "label": "2. Types of cookies", "href": "#types" },
+    { "label": "3. Cookies we use", "href": "#we-use" },
+    { "label": "4. Managing cookies", "href": "#managing" },
+    { "label": "5. Policy changes", "href": "#changes" }
+  ],
+  "sections": [
+    {
+      "id": "what-are",
+      "icon": "Cookie",
+      "title": "1. What are cookies?",
+      "content": "Cookies are small text files that are stored on your device when you visit a website. These cookies allow the site to remember your actions and preferences over a period of time, so you don't have to re-enter them each time you return to the site or navigate between pages."
+    },
+    {
+      "id": "types",
+      "icon": "Layers",
+      "title": "2. Types of cookies",
+      "intro": "There are different types of cookies based on their purpose and duration:",
+      "items": [
+        { "icon": "CheckCircle", "text": "**Technical cookies:** These are essential for the website to function and cannot be disabled. They include features like page navigation and access to secure areas." },
+        { "icon": "CheckCircle", "text": "**Preference cookies:** Allow the website to remember information that changes the way the site behaves or looks, such as your preferred language or region." },
+        { "icon": "CheckCircle", "text": "**Analytics cookies:** Help us understand how visitors interact with the website by collecting and reporting information anonymously." },
+        { "icon": "CheckCircle", "text": "**Marketing cookies:** Used to track visitors across websites to display relevant and engaging ads." }
+      ]
+    },
+    {
+      "id": "we-use",
+      "icon": "BarChart3",
+      "title": "3. Cookies we use",
+      "intro": "At SustainSoft, we use the following categories of cookies:",
+      "cards": [
+        { "title": "Essential cookies", "desc": "Necessary for the basic functioning of the site, such as authentication and security." },
+        { "title": "Performance cookies", "desc": "Help us improve website performance by identifying errors and loading issues." },
+        { "title": "Functional cookies", "desc": "Enable enhanced functionalities like embedded videos and user preferences." },
+        { "title": "Analytics cookies", "desc": "We use Google Analytics to understand traffic and improve our services." }
+      ]
+    },
+    {
+      "id": "managing",
+      "icon": "Settings",
+      "title": "4. Managing cookies",
+      "intro": "You can control and manage cookies in various ways:",
+      "steps": [
+        { "number": "01", "title": "Browser settings", "desc": "Most browsers allow you to view, manage, delete, and block cookies through their privacy settings." },
+        { "number": "02", "title": "Preferences panel", "desc": "You can access our cookie panel at any time to modify your consent preferences." },
+        { "number": "03", "title": "Third-party tools", "desc": "There are browser extensions and tools that allow you to manage cookies centrally." }
+      ]
+    }
+  ],
+  "contact": {
+    "id": "changes",
+    "title": "5. Policy changes",
+    "subtitle": "We may update this cookie policy occasionally to reflect changes in the technologies we use. If you have questions about our cookie policy, please don't hesitate to contact us.",
+    "email": "privacy@sustainsaft.org",
+    "emailLabel": "privacy@sustainsaft.org"
+  }
+}

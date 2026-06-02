@@ -1,0 +1,66 @@
+{
+  "pageTitle": "Términos de Servicio | SustainSoft",
+  "hero": {
+    "badge": "Marco Legal",
+    "title": "Términos de Servicio",
+    "subtitle": "Estos términos de servicio regulan el uso de los servicios de consultoría tecnológica de SustainSoft. Al contratar nuestros servicios, usted acepta estos términos en su totalidad.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk8fIpK-Sd8TTDLS2hjs0V35_gQZ8oQK9fEMw1w8p3SuaJQnNijgEnKBIqQV8DAquCRoPVihmU_m8eVfSPHlYPE4BVXYL8cjcKiNOgDQKS2JTjUyE_gcsJUNX8efB8weVai_DLGSbLQl0rCLUU3C5MMsnWj3IvXyOeEEgGX5bhIIKAlWWgFHIQkVxrYhRRXCFnavK5lw43UTalYb9ZBF98cLMQ0gUXIqM8MimWgph48hJgkILZajMV2rHGjz_KgyXioGyf1POtIfA"
+  },
+  "sidebar": [
+    { "label": "1. Alcance", "href": "#alcance" },
+    { "label": "2. Servicios", "href": "#servicios" },
+    { "label": "3. Responsabilidades", "href": "#responsabilidades" },
+    { "label": "4. Confidencialidad", "href": "#confidencialidad" },
+    { "label": "5. Limitaciones", "href": "#limitaciones" }
+  ],
+  "sections": [
+    {
+      "id": "alcance",
+      "icon": "FileText",
+      "title": "1. Alcance",
+      "content": "Estos Términos de Servicio aplican a todos los servicios de consultoría tecnológica proporcionados por SustainSoft a organizaciones sin fines de lucro, fundaciones y entidades del sector social. Al contratar nuestros servicios, el cliente acepta estos términos y condiciones en su totalidad."
+    },
+    {
+      "id": "servicios",
+      "icon": "Briefcase",
+      "title": "2. Servicios proporcionados",
+      "intro": "SustainSoft ofrece los siguientes servicios de consultoría tecnológica:",
+      "items": [
+        { "icon": "CheckCircle", "text": "**Diagnóstico tecnológico:** Evaluación de infraestructura digital existente e identificación de oportunidades de mejora." },
+        { "icon": "CheckCircle", "text": "**Desarrollo de software:** Diseño y construcción de soluciones tecnológicas a medida para organizaciones sociales." },
+        { "icon": "CheckCircle", "text": "**Automatización de procesos:** Implementación de herramientas y flujos de trabajo automatizados." },
+        { "icon": "CheckCircle", "text": "**Capacitación y soporte:** Formación del personal y soporte técnico continuo." }
+      ]
+    },
+    {
+      "id": "responsabilidades",
+      "icon": "Users",
+      "title": "3. Responsabilidades",
+      "intro": "Tanto SustainSoft como el cliente tienen responsabilidades específicas durante la colaboración:",
+      "cards": [
+        { "title": "Nuestra parte", "desc": "Cumplimiento de plazos acordados, calidad del código entregado, y soporte técnico según lo estipulado en el contrato." },
+        { "title": "Del cliente", "desc": "Proporcionar información precisa y oportuna, acceso a sistemas necesarios, y designación de un punto de contacto." },
+        { "title": "Comunicación", "desc": "Mantener canales de comunicación abiertos y responder a solicitudes de información dentro de plazos razonables." },
+        { "title": "Pagos", "desc": "Realizar los pagos de acuerdo con los términos y cronograma establecidos en el contrato de servicios." }
+      ]
+    },
+    {
+      "id": "confidencialidad",
+      "icon": "Shield",
+      "title": "4. Confidencialidad",
+      "intro": "La protección de su información es nuestra prioridad:",
+      "steps": [
+        { "number": "01", "title": "Acuerdos de confidencialidad", "desc": "Todo nuestro personal firma acuerdos de confidencialidad estrictos antes de acceder a información del cliente." },
+        { "number": "02", "title": "Manejo de datos", "desc": "Los datos del cliente se procesan únicamente para los fines específicos del proyecto y nunca se comparten con terceros sin consentimiento." },
+        { "number": "03", "title": "Propiedad intelectual", "desc": "El cliente retiene todos los derechos de propiedad intelectual sobre sus datos y cualquier trabajo específico desarrollado para su organización." }
+      ]
+    }
+  ],
+  "contact": {
+    "id": "limitaciones",
+    "title": "5. Limitaciones y modificaciones",
+    "subtitle": "SustainSoft se reserva el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigor una vez publicadas en nuestro sitio web. Si tiene preguntas sobre estos términos, por favor contáctenos.",
+    "email": "legal@sustainsaft.org",
+    "emailLabel": "legal@sustainsaft.org"
+  }
+}

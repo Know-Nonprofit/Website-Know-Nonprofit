@@ -1,0 +1,66 @@
+{
+  "pageTitle": "Terms of Service | SustainSoft",
+  "hero": {
+    "badge": "Legal Framework",
+    "title": "Terms of Service",
+    "subtitle": "These terms of service govern the use of SustainSoft's technology consulting services. By hiring our services, you accept these terms in their entirety.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk8fIpK-Sd8TTDLS2hjs0V35_gQZ8oQK9fEMw1w8p3SuaJQnNijgEnKBIqQV8DAquCRoPVihmU_m8eVfSPHlYPE4BVXYL8cjcKiNOgDQKS2JTjUyE_gcsJUNX8efB8weVai_DLGSbLQl0rCLUU3C5MMsnWj3IvXyOeEEgGX5bhIIKAlWWgFHIQkVxrYhRRXCFnavK5lw43UTalYb9ZBF98cLMQ0gUXIqM8MimWgph48hJgkILZajMV2rHGjz_KgyXioGyf1POtIfA"
+  },
+  "sidebar": [
+    { "label": "1. Scope", "href": "#scope" },
+    { "label": "2. Services", "href": "#services" },
+    { "label": "3. Responsibilities", "href": "#responsibilities" },
+    { "label": "4. Confidentiality", "href": "#confidentiality" },
+    { "label": "5. Limitations", "href": "#limitations" }
+  ],
+  "sections": [
+    {
+      "id": "scope",
+      "icon": "FileText",
+      "title": "1. Scope",
+      "content": "These Terms of Service apply to all technology consulting services provided by SustainSoft to non-profit organizations, foundations, and social sector entities. By hiring our services, the client accepts these terms and conditions in their entirety."
+    },
+    {
+      "id": "services",
+      "icon": "Briefcase",
+      "title": "2. Services provided",
+      "intro": "SustainSoft offers the following technology consulting services:",
+      "items": [
+        { "icon": "CheckCircle", "text": "**Technology diagnosis:** Evaluation of existing digital infrastructure and identification of improvement opportunities." },
+        { "icon": "CheckCircle", "text": "**Software development:** Design and construction of custom technology solutions for social organizations." },
+        { "icon": "CheckCircle", "text": "**Process automation:** Implementation of automated tools and workflows." },
+        { "icon": "CheckCircle", "text": "**Training and support:** Staff training and ongoing technical support." }
+      ]
+    },
+    {
+      "id": "responsibilities",
+      "icon": "Users",
+      "title": "3. Responsibilities",
+      "intro": "Both SustainSoft and the client have specific responsibilities during the collaboration:",
+      "cards": [
+        { "title": "Our part", "desc": "Compliance with agreed deadlines, quality of delivered code, and technical support as stipulated in the contract." },
+        { "title": "Client", "desc": "Provide accurate and timely information, access to necessary systems, and designation of a contact person." },
+        { "title": "Communication", "desc": "Maintain open communication channels and respond to information requests within reasonable timeframes." },
+        { "title": "Payments", "desc": "Make payments according to the terms and schedule established in the service contract." }
+      ]
+    },
+    {
+      "id": "confidentiality",
+      "icon": "Shield",
+      "title": "4. Confidentiality",
+      "intro": "Protecting your information is our priority:",
+      "steps": [
+        { "number": "01", "title": "Confidentiality agreements", "desc": "All our staff sign strict confidentiality agreements before accessing client information." },
+        { "number": "02", "title": "Data handling", "desc": "Client data is processed solely for the specific purposes of the project and never shared with third parties without consent." },
+        { "number": "03", "title": "Intellectual property", "desc": "The client retains all intellectual property rights over their data and any specific work developed for their organization." }
+      ]
+    }
+  ],
+  "contact": {
+    "id": "limitations",
+    "title": "5. Limitations and modifications",
+    "subtitle": "SustainSoft reserves the right to modify these terms at any time. Modifications will take effect once published on our website. If you have questions about these terms, please contact us.",
+    "email": "legal@sustainsaft.org",
+    "emailLabel": "legal@sustainsaft.org"
+  }
+}

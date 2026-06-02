@@ -1,0 +1,12 @@
+{
+  "brand": "SustainSoft",
+  "tagline": "© 2026 SustainSoft Consultancy. Architecting reliability for the social sector.",
+  "links": [
+    { "label": "Home", "href": "/en/" },
+    { "label": "Projects", "href": "/en/#proyectos" },
+    { "label": "Blog", "href": "#" },
+    { "label": "Privacy", "href": "/en/privacy" },
+    { "label": "Terms", "href": "/en/terms" },
+    { "label": "Cookies", "href": "/en/cookies" }
+  ]
+}

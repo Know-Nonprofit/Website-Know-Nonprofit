@@ -1,0 +1,66 @@
+{
+  "pageTitle": "Privacy Policy | SustainSoft",
+  "hero": {
+    "badge": "Ethical Commitment",
+    "title": "Privacy Policy",
+    "subtitle": "At SustainSoft, we understand that trust is the foundation of every collaboration with foundations and NGOs. This policy details our dedication to protecting your strategic data.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk8fIpK-Sd8TTDLS2hjs0V35_gQZ8oQK9fEMw1w8p3SuaJQnNijgEnKBIqQV8DAquCRoPVihmU_m8eVfSPHlYPE4BVXYL8cjcKiNOgDQKS2JTjUyE_gcsJUNX8efB8weVai_DLGSbLQl0rCLUU3C5MMsnWj3IvXyOeEEgGX5bhIIKAlWWgFHIQkVxrYhRRXCFnavK5lw43UTalYb9ZBF98cLMQ0gUXIqM8MimWgph48hJgkILZajMV2rHGjz_KgyXioGyf1POtIfA"
+  },
+  "sidebar": [
+    { "label": "1. Introduction", "href": "#introduction" },
+    { "label": "2. Data Collected", "href": "#data" },
+    { "label": "3. Use of Information", "href": "#use" },
+    { "label": "4. Data Protection", "href": "#protection" },
+    { "label": "5. Your Rights", "href": "#rights" }
+  ],
+  "sections": [
+    {
+      "id": "introduction",
+      "icon": "Shield",
+      "title": "1. Introduction",
+      "content": "SustainSoft (\"we\", \"our\" or \"the Consultant\") is committed to protecting the privacy of the foundations and non-profit entities we collaborate with. This Privacy Policy describes our practices regarding the collection, use, and disclosure of your information through our technology solutions."
+    },
+    {
+      "id": "data",
+      "icon": "Database",
+      "title": "2. Data Collected",
+      "intro": "To provide our technology consulting services effectively, we process the following categories of information:",
+      "items": [
+        { "icon": "CheckCircle", "text": "**Institutional Information:** Foundation name, legal registrations, mission, and official contact data." },
+        { "icon": "CheckCircle", "text": "**Impact Metrics:** Aggregated data on beneficiaries and programs needed for software optimization." },
+        { "icon": "CheckCircle", "text": "**Technical Information:** IP addresses, access logs, and usage data of developed platforms." }
+      ]
+    },
+    {
+      "id": "use",
+      "icon": "BarChart3",
+      "title": "3. Use of Information",
+      "intro": "We use the collected data strictly for the following purposes:",
+      "cards": [
+        { "title": "Optimization", "desc": "Improve the efficiency of the foundation's digital tools." },
+        { "title": "Security", "desc": "Detect and prevent fraudulent activities or unauthorized access." },
+        { "title": "Support", "desc": "Provide personalized technical assistance and issue resolution." },
+        { "title": "Reports", "desc": "Generate impact analysis for strategic decision-making." }
+      ]
+    },
+    {
+      "id": "protection",
+      "icon": "Lock",
+      "title": "4. Data Protection",
+      "intro": "We implement industrial-grade security measures to ensure the integrity of your information:",
+      "steps": [
+        { "number": "01", "title": "End-to-End Encryption", "desc": "All sensitive information is encrypted both in transit and at rest using AES-256 protocols." },
+        { "number": "02", "title": "Strict Access Control", "desc": "Only authorized personnel under rigorous confidentiality agreements have access to production environments." },
+        { "number": "03", "title": "Periodic Audits", "desc": "We conduct penetration tests and external security audits quarterly." }
+      ]
+    }
+  ],
+  "contact": {
+    "id": "rights",
+    "title": "5. Your Rights",
+    "subtitle": "Questions about your privacy? Our Data Protection Officer is available to answer any questions or requests related to your rights (Access, Rectification, Cancellation, and Opposition).",
+    "email": "privacy@sustainsaft.org",
+    "emailLabel": "privacy@sustainsaft.org",
+    "downloadLabel": "Download PDF"
+  }
+}

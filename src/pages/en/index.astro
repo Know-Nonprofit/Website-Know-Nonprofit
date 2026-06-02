@@ -1,9 +1,27 @@
 ---
 import Base from "@layouts/Base.astro";
-import t from "@i18n/en.json";
+import { getT } from "@lib/i18n";
+import { mapItems } from "@lib/mappers";
+import Hero from "@organisms/Hero.astro";
+import PainPoints from "@organisms/PainPoints.astro";
+import ValueProp from "@organisms/ValueProp.astro";
+import Process from "@organisms/Process.astro";
+import TechLogos from "@organisms/TechLogos.astro";
+import Services from "@organisms/Services.astro";
+import Projects from "@organisms/Projects.astro";
+import ContactForm from "@organisms/ContactForm.astro";
+
+const t = await getT("en", "index");
+const steps = mapItems(t.process.steps, (item, i) => ({ ...item, number: i + 1 }));
 ---
 
 <Base>
-  <h1>{t.home.title}</h1>
-  <p>{t.home.content}</p>
+  <Hero {...t.hero} />
+  <PainPoints {...t.painPoints} />
+  <ValueProp {...t.valueProp} />
+  <Process title={t.process.title} subtitle={t.process.subtitle} steps={steps} />
+  <TechLogos {...t.techLogos} />
+  <Services {...t.services} />
+  <Projects {...t.projects} />
+  <ContactForm form={t.form} />
 </Base>

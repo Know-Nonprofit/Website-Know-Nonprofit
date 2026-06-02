@@ -1,0 +1,10 @@
+{
+  "logo": "SustainSoft",
+  "links": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Proyectos", "href": "/#proyectos" },
+    { "label": "Blog", "href": "#" }
+  ],
+  "cta": "Contacto",
+  "ctaHref": "/#contacto"
+}
