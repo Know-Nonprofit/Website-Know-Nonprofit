@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://knownonprofit.tasy.work/sitemap-index.xml

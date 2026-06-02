@@ -1,9 +1,33 @@
 ---
 import Base from "@layouts/Base.astro";
-import t from "@i18n/es.json";
+import Icon from "@atoms/Icon.astro";
+import Button from "@atoms/Button.astro";
+import { getT } from "@lib/i18n";
+
+const t = await getT("es", "404");
 ---
 
-<Base>
-  <h1>{t["404"].title}</h1>
-  <p>{t["404"].content}</p>
+<Base title={t.pageTitle}>
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Hero centrado -->
+  <section class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto text-center">
+    <div class="max-w-2xl mx-auto">
+      <span class="inline-block bg-secondary-container text-on-secondary-container font-inter text-xs font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider">
+        {t.hero.badge}
+      </span>
+      <h1 class="font-inter text-4xl md:text-6xl font-bold text-on-surface mb-6">{t.hero.title}</h1>
+      <p class="font-inter text-lg text-on-surface-variant mb-10">{t.hero.subtitle}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button variant="primary" href="/" class="inline-flex items-center gap-2">
+          <Icon name="Home" size={18} />
+          {t.hero.cta}
+        </Button>
+        <Button variant="outline" href="/#servicios" class="inline-flex items-center gap-2">
+          <Icon name="Briefcase" size={18} />
+          {t.hero.ctaSecondary}
+        </Button>
+      </div>
+    </div>
+  </section>
 </Base>
