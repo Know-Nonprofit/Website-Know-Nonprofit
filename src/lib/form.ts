@@ -31,7 +31,8 @@ export async function sendForm(payload: unknown, clientIp: string) {
 
   const data = validation.data
   const resend = new Resend(import.meta.env.RESEND_API_KEY)
-  await resend.emails.send({
+
+  const { data: emailData, error: emailError } = await resend.emails.send({
     from: import.meta.env.EMAIL_FROM,
     to: import.meta.env.EMAIL_TO,
     replyTo: data.email,
@@ -40,6 +41,11 @@ export async function sendForm(payload: unknown, clientIp: string) {
       .map(([k, v]) => `${k}: ${v}`)
       .join("\n"),
   })
+
+  if (emailError) {
+    console.error("[sendForm] Resend error:", emailError)
+    return { ok: false as const, error: "send_failed" }
+  }
 
   return { ok: true as const }
 }

@@ -6,7 +6,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
   const result = await sendForm(body, locals.clientIp)
 
   if ("error" in result) {
-    return new Response(JSON.stringify(result), { status: 429 })
+    const status = result.error === "rate_limit" ? 429 : 500
+    return new Response(JSON.stringify(result), { status })
   }
 
   return new Response(JSON.stringify(result), {
