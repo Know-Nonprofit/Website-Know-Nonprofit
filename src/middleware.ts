@@ -13,6 +13,9 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
     "unknown"
 
   const pathname = ctx.url.pathname;
+
+  // Bypass middleware for API routes
+  if (pathname.startsWith("/api/")) return next();
   const locale = ctx.preferredLocale ?? "en";
   const isEs = locale === "es";
   const isEnUrl = pathname.startsWith("/en/") || pathname === "/en";

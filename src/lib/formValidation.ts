@@ -20,5 +20,6 @@ export function validateForm(data: Record<string, unknown>) {
   return {
     ok: Object.keys(errors).length === 0,
     errors,
+    data,
   }
 }
