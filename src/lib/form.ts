@@ -30,11 +30,20 @@ export async function sendForm(payload: unknown, clientIp: string) {
   if (!validation.ok) return validation
 
   const data = validation.data
-  const resend = new Resend(import.meta.env.RESEND_API_KEY)
+
+  const resendApiKey = import.meta.env.RESEND_API_KEY
+  const emailFrom = import.meta.env.EMAIL_FROM
+  const emailTo = import.meta.env.EMAIL_TO
+  if (!resendApiKey || !emailFrom || !emailTo) {
+    console.error("[sendForm] Missing env vars: RESEND_API_KEY, EMAIL_FROM, EMAIL_TO")
+    return { ok: false as const, error: "config_error" }
+  }
+
+  const resend = new Resend(resendApiKey)
 
   const { data: emailData, error: emailError } = await resend.emails.send({
-    from: import.meta.env.EMAIL_FROM,
-    to: import.meta.env.EMAIL_TO,
+    from: emailFrom,
+    to: emailTo,
     replyTo: data.email,
     subject: `Nuevo contacto web — ${(data.fundacion || data.organization || "sin fundación")}`,
     text: Object.entries(data)
