@@ -1,0 +1,11 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+const locale = Astro.currentLocale ?? "es";
+---
+
+<nav>
+  <a href={getRelativeLocaleUrl(locale, "")}>Home</a>
+  <a href={getRelativeLocaleUrl(locale, locale === "es" ? "privacidad" : "privacy")}>Privacy</a>
+  <a href={getRelativeLocaleUrl(locale, locale === "es" ? "terminos" : "terms")}>Terms</a>
+  <a href={getRelativeLocaleUrl(locale, "cookies")}>Cookies</a>
+</nav>

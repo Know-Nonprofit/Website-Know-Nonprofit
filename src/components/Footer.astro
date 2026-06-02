@@ -1,0 +1,7 @@
+---
+const locale = Astro.currentLocale ?? "es";
+---
+
+<footer>
+  <p>{locale === "es" ? "Pie de página - este es en español" : "Footer - this is in english"}</p>
+</footer>

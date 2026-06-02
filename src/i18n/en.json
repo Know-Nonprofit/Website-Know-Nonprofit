@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "footer": {
+    "text": "Footer - this is in english"
+  },
+  "home": {
+    "title": "Home",
+    "content": "this is in english"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "content": "this is in english"
+  },
+  "terms": {
+    "title": "Terms",
+    "content": "this is in english"
+  },
+  "cookies": {
+    "title": "Cookies",
+    "content": "this is in english"
+  },
+  "404": {
+    "title": "404",
+    "content": "Page not found - this is in english"
+  }
+}
