@@ -1,0 +1,47 @@
+---
+import Base from "@layouts/Base.astro";
+import { getEntry, render } from 'astro:content';
+import BlogMeta from "@modules/molecules/blog/BlogMeta.astro";
+import NewsletterCard from "@modules/molecules/cards/NewsletterCard.astro";
+import { getT } from "@lib/i18n";
+
+const { collection, slug } = Astro.params;
+const locale = Astro.currentLocale ?? "es";
+const t = await getT(locale, collection);
+const entry = await getEntry(`es/${collection}`, slug);
+if (!entry) return Astro.redirect("/404");
+const { Content } = await render(entry);
+
+const backLabel = collection === "blog" ? "← Volver al blog" : "← Volver a proyectos";
+const collectionUrl = `/${collection}`;
+---
+
+<Base
+  title={`${entry.data.title} | SustainSoft`}
+  description={entry.data.description}
+  ogType={collection === "blog" ? "article" : undefined}
+>
+  <article class="py-20 bg-background">
+    <div class="max-w-[768px] mx-auto px-margin-mobile md:px-margin-desktop">
+      <a
+        href={collectionUrl}
+        class="inline-flex items-center gap-1 text-sm text-on-surface-variant hover:text-primary transition-colors mb-8"
+      >
+        {backLabel}
+      </a>
+      <BlogMeta
+        category={entry.data.tag}
+        title={entry.data.title}
+        date={entry.data.date.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}
+        readTime="5 min read"
+      />
+      <div class="prose prose-lg mt-12 max-w-none">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <div class="max-w-[768px] mx-auto px-margin-mobile md:px-margin-desktop pb-20">
+    <NewsletterCard {...t.newsletter} />
+  </div>
+</Base>

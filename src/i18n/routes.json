@@ -2,11 +2,17 @@
   "es": {
     "privacy": "privacidad",
     "terms": "terminos",
-    "cookies": "cookies"
+    "cookies": "cookies",
+    "volunteering": "voluntariado",
+    "blog": "blog",
+    "projects": "proyectos"
   },
   "en": {
     "privacidad": "privacy",
     "terminos": "terms",
-    "cookies": "cookies"
+    "cookies": "cookies",
+    "voluntariado": "volunteering",
+    "blog": "blog",
+    "proyectos": "projects"
   }
 }

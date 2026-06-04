@@ -1,0 +1,18 @@
+{
+  "title": "Proyectos de Impacto Social",
+  "subtitle": "Colección de implementaciones técnicas para organizaciones sin fines de lucro. Cada proyecto resuelve un problema operacional real con software a medida.",
+  "newsletter": {
+    "title": "Suscríbete al newsletter",
+    "subtitle": "Recibe las últimas ideas sobre ingeniería social directamente en tu bandeja de entrada.",
+    "cta": "Únete ahora",
+    "placeholder": "tu@email.com",
+    "successMsg": "¡Gracias por suscribirte!",
+    "errorMsg": "Ocurrió un error. Intenta de nuevo.",
+    "invalidEmailMsg": "Ingresa un correo válido",
+    "sendingMsg": "Enviando..."
+  },
+  "pagination": {
+    "prev": "Anterior",
+    "next": "Siguiente"
+  }
+}

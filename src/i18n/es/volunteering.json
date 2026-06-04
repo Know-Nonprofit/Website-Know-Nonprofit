@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "title": "Quiero ser voluntario para tu fundación.",
+    "subtitle": "Soy ingeniero de software. Resuelvo problemas operacionales con software. Respóndeme por correo y empezamos.",
+    "cta": "Quiero ser voluntario",
+    "ctaSecondary": "Ver lo que construyo",
+    "image": "https://images.pexels.com/photos/29267517/pexels-photo-29267517.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "badge": {
+      "icon": "Mail",
+      "text": "Respóndeme por correo y empezamos"
+    }
+  },
+  "services": {
+    "title": "Lo que construyo",
+    "items": [
+      {
+        "icon": "Globe",
+        "title": "Desarrollo web",
+        "desc": "Plataformas y sistemas internos accesibles desde cualquier navegador."
+      },
+      {
+        "icon": "Zap",
+        "title": "Automatización",
+        "desc": "Elimina los procesos manuales que tu equipo repite cada semana."
+      },
+      {
+        "icon": "Settings",
+        "title": "Software a medida",
+        "desc": "Una herramienta construida específicamente para cómo opera tu fundación."
+      },
+      {
+        "icon": "Search",
+        "title": "Consultoría SEO / IA",
+        "desc": "Visibilidad y herramientas inteligentes para tu organización."
+      }
+    ],
+    "cta": "Quiero ser voluntario para tu fundación"
+  },
+  "whoIAm": {
+    "title": "Quién soy",
+    "subtitle": "Sebastian Tamayo. Ingeniero de software con base en Medellín, Colombia.",
+    "tagline": "Eh trabajo con",
+    "logo": "https://www.cfa.com.co/wp-content/uploads/2020/03/Logo-azul-alta.png"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "items": [
+      {
+        "icon": "Phone",
+        "title": "Una llamada para entender el problema",
+        "desc": "Agendamos una llamada para entender el problema operacional de tu fundación."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Defino el alcance y construyo la solución",
+        "desc": "Diseño la arquitectura técnica y empiezo a construir la solución de forma iterativa."
+      },
+      {
+        "icon": "Clock",
+        "title": "Ocho a doce semanas",
+        "desc": "La mayoría de proyectos de voluntariado se entregan en 8 a 12 semanas según la complejidad."
+      },
+      {
+        "icon": "CheckCircle",
+        "title": "Tú eres dueño del código cuando terminamos",
+        "desc": "Entrego el código fuente completo, documentación y capacitación al finalizar."
+      }
+    ],
+    "cta": "Hablemos"
+  },
+  "foundations": {
+    "title": "Fundaciones con las que he trabajado",
+    "cta": "Ver más"
+  },
+  "form": {
+    "title": "Hablemos",
+    "subtitle": "Quiero ser voluntario para tu fundación. Cuéntame el problema y empezamos.",
+    "fields": [
+      { "name": "nombre", "label": "Nombre", "type": "text", "placeholder": "Tu nombre" },
+      { "name": "fundacion", "label": "Fundación / ONG", "type": "text", "placeholder": "Nombre de la organización" },
+      { "name": "email", "label": "Correo electrónico", "type": "email", "placeholder": "tu@fundacion.org" },
+      { "name": "phone", "label": "Número de teléfono", "type": "text", "placeholder": "+57 300 123 4567 (incluye prefijo de país)" },
+      { "name": "mensaje", "label": "Mensaje", "type": "textarea", "placeholder": "Describe el problema operacional..." }
+    ],
+    "cta": "Enviar mensaje",
+    "note": "Reviso cada mensaje personalmente y respondo en menos de 72 horas.",
+    "messages": {
+      "sending": "Enviando...",
+      "success": "¡Enviado!",
+      "successDesc": "Responderé tu correo en menos de 72 horas.",
+      "rateLimitTitle": "Límite alcanzado",
+      "rateLimitDesc": "Demasiadas solicitudes. Espera 1 minuto.",
+      "fieldErrorTitle": "Revisa los campos",
+      "fieldErrorDesc": "Algunos campos obligatorios están vacíos o son inválidos.",
+      "networkErrorTitle": "Error de red",
+      "networkErrorDesc": "No se pudo enviar la solicitud. Intenta de nuevo.",
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "El correo electrónico no es válido"
+    }
+  }
+}

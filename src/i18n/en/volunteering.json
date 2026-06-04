@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "title": "I want to volunteer for your foundation.",
+    "subtitle": "I am a software engineer. I solve operational problems with software. Reply to my email and we start.",
+    "cta": "I want to volunteer",
+    "ctaSecondary": "See what I build",
+    "image": "https://images.pexels.com/photos/29267517/pexels-photo-29267517.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "badge": {
+      "icon": "Mail",
+      "text": "Reply to my email and we start"
+    }
+  },
+  "services": {
+    "title": "What I build",
+    "items": [
+      {
+        "icon": "Globe",
+        "title": "Web development",
+        "desc": "Internal platforms and systems accessible from any browser."
+      },
+      {
+        "icon": "Zap",
+        "title": "Automation",
+        "desc": "Eliminate the manual processes your team repeats every week."
+      },
+      {
+        "icon": "Settings",
+        "title": "Custom software",
+        "desc": "A tool built specifically for how your foundation operates."
+      },
+      {
+        "icon": "Search",
+        "title": "SEO / AI consulting",
+        "desc": "Visibility and intelligent tools for your organization."
+      }
+    ],
+    "cta": "I want to volunteer for your foundation"
+  },
+  "whoIAm": {
+    "title": "Who I am",
+    "subtitle": "Sebastian Tamayo. Software engineer based in Medellin, Colombia.",
+    "tagline": "I work with",
+    "logo": "https://www.cfa.com.co/wp-content/uploads/2020/03/Logo-azul-alta.png"
+  },
+  "howItWorks": {
+    "title": "How this works",
+    "items": [
+      {
+        "icon": "Phone",
+        "title": "One call to understand the problem",
+        "desc": "We schedule a call to understand the operational problem your foundation is facing."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "I define the scope and build the solution",
+        "desc": "I design the technical architecture and start building the solution iteratively."
+      },
+      {
+        "icon": "Clock",
+        "title": "Eight to twelve weeks",
+        "desc": "Most volunteer projects are delivered in 8 to 12 weeks depending on complexity."
+      },
+      {
+        "icon": "CheckCircle",
+        "title": "You own the code when we finish",
+        "desc": "Full source code, documentation and training are handed over at delivery."
+      }
+    ],
+    "cta": "Let's talk"
+  },
+  "foundations": {
+    "title": "Foundations I have worked with",
+    "cta": "View more"
+  },
+  "form": {
+    "title": "Let's talk",
+    "subtitle": "I want to volunteer for your foundation. Tell me about the problem and we start.",
+    "fields": [
+      { "name": "name", "label": "Name", "type": "text", "placeholder": "Your name" },
+      { "name": "foundation", "label": "Foundation / NGO", "type": "text", "placeholder": "Organization name" },
+      { "name": "email", "label": "Email", "type": "email", "placeholder": "you@foundation.org" },
+      { "name": "phone", "label": "Phone number", "type": "text", "placeholder": "+57 300 123 4567 (include country code)" },
+      { "name": "message", "label": "Message", "type": "textarea", "placeholder": "Describe the operational problem..." }
+    ],
+    "cta": "Send message",
+    "note": "I review every message personally and reply within 72 hours.",
+    "messages": {
+      "sending": "Sending...",
+      "success": "Sent!",
+      "successDesc": "I will reply to your email within 72 hours.",
+      "rateLimitTitle": "Limit reached",
+      "rateLimitDesc": "Too many requests. Wait 1 minute.",
+      "fieldErrorTitle": "Check the fields",
+      "fieldErrorDesc": "Some required fields are empty or invalid.",
+      "networkErrorTitle": "Network error",
+      "networkErrorDesc": "Could not send the request. Try again.",
+      "required": "This field is required",
+      "invalidEmail": "The email is not valid"
+    }
+  }
+}
