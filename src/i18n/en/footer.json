@@ -1,10 +1,10 @@
 {
-  "brand": "SustainSoft",
-  "tagline": "© 2026 SustainSoft Consultancy. Architecting reliability for the social sector.",
+  "brand": "Sebastián Tamayo",
+  "tagline": "© 2026 Sebastián Tamayo.",
   "links": [
     { "label": "Home", "href": "/en/" },
-    { "label": "Projects", "href": "/en/#proyectos" },
-    { "label": "Blog", "href": "#" },
+    { "label": "Projects", "href": "/en/projects" },
+    { "label": "Blog", "href": "/en/blog" },
     { "label": "Privacy", "href": "/en/privacy" },
     { "label": "Terms", "href": "/en/terms" },
     { "label": "Cookies", "href": "/en/cookies" }

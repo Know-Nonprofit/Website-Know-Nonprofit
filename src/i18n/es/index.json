@@ -8,7 +8,7 @@
     "subtitle": "Soy consultor independiente de desarrollo de software. Trabajo con fundaciones y ONGs en Latinoamérica para diagnosticar, diseñar y construir los sistemas que necesitan para dejar de operar en el caos.",
     "cta": "Hablar sobre mi fundación",
     "ctaSecondary": "Ver proyectos",
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD9K_C9FrOjdBzyHmGkK4bWAKxSYlnP-SLE8U7N2jnF08E3FfGq77Ecu9NQDip3jf-smvu_-GcrVrbxsObYJ1JuAk1ZXaRnvCj3aP6Kj4OBjW2T7tE5f4Odj2GN3-U9-Ch3mnpOzQHAfpCQ8ol8qG5P7vdtex6dPf8LXYe8zbKHaf92KGQRZBxBXf4VIYTrqzCnO4QGPawiicyW1IOKSHq7xF4mV2qD7-awQPeZ-k8qsHgeaYWtMJV7mMDNxz2H5_PMmXILk9MESoU",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop",
     "badge": {
       "icon": "TrendingUp",
       "text": "Estandarización de procesos regionales"
@@ -34,11 +34,8 @@
       "Experiencia específica en contextos Latinoamericanos",
       "Enfoque en herramientas de bajo costo y alta escalabilidad"
     ],
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCArqKSH4Hw1WrYQzy0cR3g6WdOIykpGsowuEF4gY0vZMIBKuM8WqnU4Vw9vIZMBt-n_qkNACnm67KXeZZGswBkmEwLIdV9V-hklh9uImnlHKxGCQnLdNN0C67X2Ep08BsE-n19LYKiVFVLZTT5-IMCoN2C89a78GBkjgfLQvUj9qGW6BtbWWvRuX9z3JNvvPpoPL6hi629nNwbRZEW88NzcpgTV-3wedgfbKjzA-9k6_ETdPObg3_Pirr4Ntr_D0vhp2OkXBpmhxA",
-    "quote": {
-      "text": "Dejamos de apagar fuegos operativos para enfocarnos en nuestra misión.",
-      "author": "Director Regional, NGO Partner"
-    }
+    "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80&auto=format&fit=crop",
+    "name": "Sebastián Tamayo"
   },
   "process": {
     "title": "Cómo trabajo",
@@ -51,8 +48,8 @@
     ]
   },
   "techLogos": {
-    "title": "Herramientas que ya conoce su equipo",
-    "items": ["Google Workspace", "Notion", "Airtable", "Trello", "Slack", "Looker Studio", "Google Sheets", "Zapier", "Make", "Google Apps Script", "Mailchimp", "Typeform"]
+    "title": "Fundaciones con las que he trabajado",
+    "items": []
   },
   "services": {
     "title": "Lo que construyo",
@@ -66,12 +63,7 @@
   },
   "projects": {
     "title": "Trabajo con ellos",
-    "items": [
-      { "country": "Colombia", "title": "Fundación Raíces", "desc": "Sistema centralizado para el seguimiento de programas educativos en zonas rurales.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAKXPujxic47MTetJc1wrXL7wrIOv1MDy-fIHqr0jsL3bpm7gWxx68Kc8VjDLa-GwVu3ixzr9GzKN7fB-fXIO96C0ya9oUMqyPZ0TGnsNkuTdEUyjuZT1CYzjtAnSX-o9RbdzW-Cu6_MmNylNoAMnFXWh1rMFPzrCXym5c6aMy6WuQOCsRyGYksX5vJZ9jCX5MbflRvnMivRO8vwXRc0f2BYlFaLgjGYc_vno9LfXOsrQgqITw5Rb4Z9sTlkP-Nr2rTY-u_v-JddAY", "link": "Ver más" },
-      { "country": "México", "title": "ONG Semilla Viva", "desc": "App móvil para el registro de cultivos y asistencia técnica a pequeños productores.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBeiUqZr_YA4n8JWUcIunxA-HAZc1i57qVytL0nmYTB9hTmlTSJMcuee_IonBMIHJ0kNv_LwsVgbJHJ_CAXqT8Xwe4tqeUyFkkgCv2_o2tY_1Zq_VaiCwVOBsXLSAKsMLliwnmGUWLVpssrtezlqs9tDPFTudsz0ryOnHyqB3UGDleHyGNubo6RiSnVB_GiBWVDtONVtFnJZoednd465da5epVgE6i6lwpXqo44oSYtTDI7TXAwC5nYkTZ7SxA_magkoIjyAJ-pr-Q", "link": "Ver más" },
-      { "country": "Perú", "title": "Fundación Avanza", "desc": "Dashboard de impacto nacional para programas de salud materno-infantil.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC-U9viyBIrrMF8kzF4yRChePwBvEhHAuncoa5QlFCu7qOA8Jg7eeR54y9i7juiRqPtLAlAvhEPY3l-h96KE1adoSfuPLIrioH3iobtaxj2PbiSfcST1nTM7rVUadRNi9OJEMM6WMEz3v8vTjwsaZWBKiwMOE3xTM35CO9578SLTs95j9AsTWAlKZM9xlCuEbJw9M9Ka7yAlzcSvDlqncxrP-baz_UUn1BasxlmSUqBLnM_dqphjVwpMuZElW2vTG9ofyucN4gvJl4", "link": "Ver más" },
-      { "country": "Argentina", "title": "Colectivo Tejido", "desc": "Plataforma de gestión de donaciones y red de voluntariado urbano.", "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCC-h0FrrnlFHtx9TNze9K-EQnKc76-XQEDixmbK8KsUtyQAE3LW5n3tYr6xbb3JXWcZkkXJb3011gQjIYP5-8Wu_6J6TXclc6nhjKfr1MpdNXq6Dp7AwBnQ4mPKwksfgdtUvREMHOpeCzNNj03sFIwDkn4hQ4DoydDSvuzsW4mUs0J-1URhLKsw00TN-xRtSO6L2FvFmNizI7DmvZbsr-tXyRgKP844wyWGkl5Oc8Fd88wNuFJ9NZRvoFX0D2eeP5YydVuT5VojNU", "link": "Ver más" }
-    ]
+    "cta": "Ver más"
   },
   "form": {
     "title": "¿Su organización está lista para operar diferente?",

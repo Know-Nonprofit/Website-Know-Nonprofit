@@ -8,9 +8,10 @@
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
-      "@atoms/*": ["src/components/atoms/*"],
-      "@molecules/*": ["src/components/molecules/*"],
-      "@organisms/*": ["src/components/organisms/*"],
+      "@modules/*": ["src/modules/*"],
+      "@atoms/*": ["src/modules/atoms/*"],
+      "@molecules/*": ["src/modules/molecules/*"],
+      "@organisms/*": ["src/modules/organisms/*"],
       "@lib/*": ["src/lib/*"]
     }
   },

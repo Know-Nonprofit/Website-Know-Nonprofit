@@ -1,7 +1,8 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* ============================================
-   STITCH DESIGN SYSTEM - SustainSoft
+   STITCH DESIGN SYSTEM
    Tokens exactos del HTML de referencia
    ============================================ */
 
@@ -69,4 +70,32 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
+}
+
+/* ============================================
+   PROSE (Markdown content)
+   ============================================ */
+.prose {
+  --tw-prose-body: var(--color-on-surface);
+  --tw-prose-headings: var(--color-on-surface);
+  --tw-prose-lead: var(--color-on-surface-variant);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-bold: var(--color-on-surface);
+  --tw-prose-counters: var(--color-on-surface-variant);
+  --tw-prose-bullets: var(--color-on-surface-variant);
+  --tw-prose-hr: var(--color-outline-variant);
+  --tw-prose-quotes: var(--color-on-surface);
+  --tw-prose-quote-borders: var(--color-secondary);
+  --tw-prose-captions: var(--color-on-surface-variant);
+  --tw-prose-code: var(--color-on-surface);
+  --tw-prose-pre-code: var(--color-on-surface);
+  --tw-prose-pre-bg: var(--color-surface-container-high);
+  --tw-prose-th-borders: var(--color-outline);
+  --tw-prose-td-borders: var(--color-outline-variant);
+}
+.prose img {
+  border-radius: var(--radius-xl);
+}
+.prose table {
+  font-size: 0.875rem;
 }

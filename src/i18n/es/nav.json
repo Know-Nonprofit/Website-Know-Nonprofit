@@ -1,9 +1,9 @@
 {
-  "logo": "SustainSoft",
+  "logo": "Sebastián Tamayo",
   "links": [
     { "label": "Inicio", "href": "/" },
-    { "label": "Proyectos", "href": "/#proyectos" },
-    { "label": "Blog", "href": "#" }
+    { "label": "Proyectos", "href": "/proyectos" },
+    { "label": "Blog", "href": "/blog" }
   ],
   "cta": "Contacto",
   "ctaHref": "/#contacto"
