@@ -1,0 +1,111 @@
+---
+import Icon from "@modules/atoms/icons/Icon.astro";
+import Input from "@modules/atoms/inputs/Input.astro";
+import Button from "@modules/atoms/buttons/Button.astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  cta: string;
+  placeholder?: string;
+  successMsg?: string;
+  errorMsg?: string;
+  invalidEmailMsg?: string;
+  sendingMsg?: string;
+}
+
+const {
+  title,
+  subtitle,
+  cta,
+  placeholder = "email@example.com",
+  successMsg = "¡Gracias por suscribirte!",
+  errorMsg = "Ocurrió un error. Intenta de nuevo.",
+  invalidEmailMsg = "Ingresa un correo válido",
+  sendingMsg = "Enviando...",
+} = Astro.props;
+---
+
+<div class="bg-secondary rounded-xl p-6 flex flex-col items-center text-center" id="newsletter-card">
+  <div class="mb-4">
+    <Icon name="Mail" size={40} class="text-white" />
+  </div>
+  <div id="newsletter-content">
+    <h3 class="font-inter text-2xl font-semibold text-white leading-8 mb-3">
+      {title}
+    </h3>
+    <p class="text-white/90 font-inter text-sm leading-5 mb-6">
+      {subtitle}
+    </p>
+    <form id="newsletter-form" class="w-full flex flex-col gap-3" novalidate data-success={successMsg} data-error={errorMsg} data-invalid={invalidEmailMsg} data-sending={sendingMsg}>
+      <div id="newsletter-feedback" class="hidden text-sm text-white/90 text-center"></div>
+      <Input
+        type="email"
+        name="email"
+        placeholder={placeholder}
+        required={false}
+        class="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+      />
+      <Button variant="cta" size="lg" type="submit" class="w-full">
+        {cta}
+      </Button>
+    </form>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var form = document.getElementById("newsletter-form");
+    var feedback = document.getElementById("newsletter-feedback");
+    var content = document.getElementById("newsletter-content");
+    if (!form || !feedback || !content) return;
+
+    var btn = form.querySelector("button[type='submit']");
+    if (!btn) return;
+
+    var successMsg = form.getAttribute("data-success") || "\u00a1Gracias por suscribirte!";
+    var errorMsg = form.getAttribute("data-error") || "Ocurri\u00f3 un error. Intenta de nuevo.";
+    var invalidMsg = form.getAttribute("data-invalid") || "Ingresa un correo v\u00e1lido";
+    var sendingText = form.getAttribute("data-sending") || "Enviando...";
+    var originalText = btn.innerText;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      var email = data.get("email");
+
+      if (!email || (typeof email === "string" && email.trim() === "")) {
+        feedback.textContent = invalidMsg;
+        feedback.classList.remove("hidden");
+        return;
+      }
+
+      feedback.classList.add("hidden");
+      btn.disabled = true;
+      btn.innerText = sendingText;
+
+      fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email }),
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.ok) {
+            content.innerHTML = '<div class="py-6"><p class="text-white font-inter text-lg font-semibold">' + successMsg + '</p></div>';
+          } else {
+            feedback.textContent = errorMsg;
+            feedback.classList.remove("hidden");
+          }
+        })
+        .catch(function () {
+          feedback.textContent = errorMsg;
+          feedback.classList.remove("hidden");
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.innerText = originalText;
+        });
+    });
+  })();
+</script>

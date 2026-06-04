@@ -1,0 +1,34 @@
+---
+import Input from "@modules/atoms/inputs/Input.astro";
+import Select from "@modules/atoms/inputs/Select.astro";
+import Textarea from "@modules/atoms/inputs/Textarea.astro";
+
+interface Props {
+  label: string;
+  name: string;
+  type: string;
+  placeholder?: string;
+  options?: string[];
+  required?: boolean;
+}
+
+const { label, name, type, placeholder = "", options = [], required = true } = Astro.props;
+---
+
+<div class="space-y-1" data-formfield={name}>
+  <label class="font-inter text-sm font-semibold text-primary flex items-center gap-1">
+    {label}
+    {required
+      ? <span class="text-error">*</span>
+      : <span class="text-on-surface-variant text-xs font-normal">(opcional)</span>
+    }
+  </label>
+  {type === "select" ? (
+    <Select name={name} options={options} required={required} />
+  ) : type === "textarea" ? (
+    <Textarea name={name} placeholder={placeholder} required={required} />
+  ) : (
+    <Input type={type as any} name={name} placeholder={placeholder} required={required} />
+  )}
+  <span class="field-error hidden text-error text-sm font-medium min-h-[20px] block"></span>
+</div>

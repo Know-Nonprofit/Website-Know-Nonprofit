@@ -1,0 +1,37 @@
+---
+import Badge from "@modules/atoms/badges/Badge.astro";
+import Icon from "@modules/atoms/icons/Icon.astro";
+
+interface Props {
+  category: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  link?: string;
+  cta?: string;
+}
+
+const { category, date, title, excerpt, link = "#", cta = "Read more" } = Astro.props;
+---
+
+<article class="group bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col hover:shadow-md transition-all">
+  <div class="flex items-center gap-3 mb-3">
+    <Badge label={category} />
+    <span class="text-on-surface-variant text-xs font-semibold font-inter leading-4 tracking-tight">
+      {date}
+    </span>
+  </div>
+  <h3 class="font-inter text-2xl font-semibold text-primary leading-8 mb-3">
+    {title}
+  </h3>
+  <p class="text-on-surface-variant font-inter text-base leading-6 mb-6 flex-1">
+    {excerpt}
+  </p>
+  <a
+    href={link}
+    class="inline-flex items-center gap-1 text-secondary font-inter text-sm font-semibold leading-5 tracking-tight hover:underline group-hover:gap-2 transition-all w-fit"
+  >
+    {cta}
+    <Icon name="ArrowRight" size={16} class="text-secondary" />
+  </a>
+</article>

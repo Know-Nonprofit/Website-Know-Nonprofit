@@ -1,0 +1,35 @@
+---
+import PainCard from "@modules/molecules/cards/PainCard.astro";
+import Button from "@modules/atoms/buttons/Button.astro";
+
+interface Step {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+interface Props {
+  title: string;
+  items: Step[];
+  cta: string;
+}
+
+const { title, items, cta } = Astro.props;
+---
+
+<section class="py-20 bg-background" id="como-funciona">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="text-center mb-16">
+      <h2 class="font-inter text-3xl font-semibold text-primary mb-4">{title}</h2>
+      <div class="h-1 w-20 bg-secondary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {items.map(item => (
+        <PainCard {...item} />
+      ))}
+    </div>
+    <div class="mt-16 text-center">
+      <Button variant="cta" size="lg" href="#contacto" class="bg-[#C05621]">{cta}</Button>
+    </div>
+  </div>
+</section>

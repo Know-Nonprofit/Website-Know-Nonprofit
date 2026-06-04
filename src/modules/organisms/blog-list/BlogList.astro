@@ -1,0 +1,67 @@
+---
+import TextBlock from "@modules/atoms/text/TextBlock.astro";
+import BlogCard from "@modules/molecules/cards/BlogCard.astro";
+import NewsletterCard from "@modules/molecules/cards/NewsletterCard.astro";
+import Pagination from "@modules/molecules/pagination/Pagination.astro";
+
+interface BlogItem {
+  category: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  link?: string;
+}
+
+interface NewsletterProps {
+  title: string;
+  subtitle: string;
+  cta: string;
+  placeholder?: string;
+}
+
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  prevLabel?: string;
+  nextLabel?: string;
+  basePath: string;
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+  items: BlogItem[];
+  newsletter: NewsletterProps;
+  pagination: PaginationProps;
+}
+
+const { title, subtitle, items, newsletter, pagination } = Astro.props;
+---
+
+<section class="py-20 bg-background">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="mb-16 max-w-2xl">
+      <TextBlock
+        as="h1"
+        text={title}
+        class="text-3xl md:text-4xl font-bold text-primary leading-tight mb-4"
+      />
+      <TextBlock
+        as="p"
+        text={subtitle}
+        class="text-lg text-on-surface-variant leading-7"
+      />
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map(item => (
+        <BlogCard {...item} />
+      ))}
+      <NewsletterCard {...newsletter} />
+    </div>
+
+    <div class="mt-16 flex justify-center">
+      <Pagination {...pagination} />
+    </div>
+  </div>
+</section>

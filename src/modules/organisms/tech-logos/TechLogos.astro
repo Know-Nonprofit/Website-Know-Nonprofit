@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  items: string[];
+}
+
+const { title } = Astro.props;
+---
+
+<section class="py-16 bg-background border-y border-outline-variant">
+  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <h3 class="font-inter text-sm font-semibold text-center text-on-surface-variant uppercase tracking-widest mb-10">{title}</h3>
+    <div class="flex justify-center">
+      <img
+        src="https://www.cfa.com.co/wp-content/uploads/2020/03/Logo-azul-alta.png"
+        alt="CFA"
+        class="h-20 opacity-60 hover:opacity-100 transition-opacity"
+      />
+    </div>
+  </div>
+</section>
