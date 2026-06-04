@@ -19,8 +19,8 @@ export const onRequest = defineMiddleware(async (ctx, next) => {
 
   const pathname = ctx.url.pathname;
 
-  // Bypass middleware for API routes
-  if (pathname.startsWith("/api/")) return next();
+  // Bypass middleware for API routes and static files (robots.txt, sitemap, images, etc.)
+  if (pathname.startsWith("/api/") || /\.[a-zA-Z0-9]{2,5}$/.test(pathname)) return next();
 
   const locale = ctx.preferredLocale ?? "en";
   const isEs = locale === "es";
