@@ -1,25 +1,16 @@
 ---
 import Base from "@layouts/Base.astro"
 import { getT } from "@lib/i18n"
-import PageHero from "@organisms/PageHero.astro"
-import ContentSidebar from "@organisms/ContentSidebar.astro"
-import ContentSection from "@organisms/ContentSection.astro"
-import ContactCTA from "@organisms/ContactCTA.astro"
+import { marked } from "marked"
 
 const t = await getT("en", "cookies")
+const html = await marked.parse(t.content)
 ---
 
-<Base title={t.pageTitle}>
-  <PageHero {...t.hero} />
-  <section class="px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto pb-16">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-      <ContentSidebar items={t.sidebar} />
-      <div class="md:col-span-9 space-y-8">
-        {t.sections.map(s => (
-          <ContentSection {...s} />
-        ))}
-        <ContactCTA {...t.contact} />
-      </div>
+<Base title={t.pageTitle} description={t.pageDescription}>
+  <article class="py-20 bg-background">
+    <div class="max-w-[768px] mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="prose prose-lg max-w-none" set:html={html} />
     </div>
-  </section>
+  </article>
 </Base>
