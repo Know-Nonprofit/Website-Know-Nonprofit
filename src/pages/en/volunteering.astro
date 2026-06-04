@@ -1,0 +1,36 @@
+---
+import Base from "@layouts/Base.astro";
+import { getT } from "@lib/i18n";
+import { getCollection } from 'astro:content';
+import Hero from "@modules/organisms/hero/Hero.astro";
+import Services from "@modules/organisms/services/Services.astro";
+import ClientLogos from "@modules/organisms/client-logos/ClientLogos.astro";
+import HowItWorks from "@modules/organisms/how-it-works/HowItWorks.astro";
+import Projects from "@modules/organisms/projects/Projects.astro";
+import ContactForm from "@modules/organisms/forms/ContactForm.astro";
+
+const t = await getT("en", "volunteering");
+
+const entries = await getCollection("en/projects", ({ data }) => !data.draft);
+entries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const projectItems = entries.map(entry => ({
+  country: entry.data.country ?? "",
+  title: entry.data.title,
+  desc: entry.data.description,
+  image: entry.data.image ?? "",
+  link: `/en/projects/${entry.id}`,
+  cta: t.foundations.cta,
+}));
+---
+
+<Base
+  title="Volunteering | Sebastian Tamayo — Software Engineer"
+  description="I want to volunteer for your foundation. I am a software engineer who solves operational problems with technology."
+>
+  <Hero {...t.hero} />
+  <Services {...t.services} columns={4} />
+  <ClientLogos {...t.whoIAm} />
+  <HowItWorks {...t.howItWorks} />
+  <Projects title={t.foundations.title} items={projectItems} />
+  <ContactForm form={t.form} />
+</Base>

@@ -1,0 +1,10 @@
+{
+  "pageTitle": "Page Not Found | SustainSoft",
+  "hero": {
+    "badge": "Error 404",
+    "title": "Page Not Found",
+    "subtitle": "Sorry, the page you are looking for does not exist or has been moved. Please return to the home page or explore our services.",
+    "cta": "Back to home",
+    "ctaSecondary": "View services"
+  }
+}

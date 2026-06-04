@@ -1,0 +1,18 @@
+{
+  "es": {
+    "privacy": "privacidad",
+    "terms": "terminos",
+    "cookies": "cookies",
+    "volunteering": "voluntariado",
+    "blog": "blog",
+    "projects": "proyectos"
+  },
+  "en": {
+    "privacidad": "privacy",
+    "terminos": "terms",
+    "cookies": "cookies",
+    "voluntariado": "volunteering",
+    "blog": "blog",
+    "proyectos": "projects"
+  }
+}

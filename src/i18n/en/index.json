@@ -1,0 +1,98 @@
+{
+  "tokens": {
+    "cta": "#C05621",
+    "quoteBg": "#ffffff"
+  },
+  "hero": {
+    "title": "Your foundation deserves to operate with the same structure as any professional organization.",
+    "subtitle": "I am an independent software development consultant. I work with foundations and NGOs in Latin America to diagnose, design, and build the systems they need to stop operating in chaos.",
+    "cta": "Talk about my foundation",
+    "ctaSecondary": "View projects",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop",
+    "badge": {
+      "icon": "TrendingUp",
+      "text": "Regional process standardization"
+    }
+  },
+  "painPoints": {
+    "title": "If you got this far, you probably recognize one of these situations.",
+    "items": [
+      { "icon": "AlertCircle", "title": "Data chaos", "desc": "Information fragmented across multiple Excel files that never match each other." },
+      { "icon": "TimerOff", "title": "Slow reports", "desc": "Days of manual work just to generate an impact report for donors." },
+      { "icon": "RotateCcw", "title": "Lack of processes", "desc": "Each team member has their own 'way' of storing and processing information." },
+      { "icon": "TrendingDown", "title": "Growth without foundation", "desc": "The foundation grows in impact but the administrative infrastructure is on the verge of collapse." },
+      { "icon": "CreditCard", "title": "Technical costs", "desc": "Hiring an in-house IT team is financially unviable for the annual budget." },
+      { "icon": "Compass", "title": "Lack of guidance", "desc": "You know you need technology, but don't know where to start or which tools to choose." }
+    ],
+    "cta": "Talk about my foundation"
+  },
+  "valueProp": {
+    "title": "Software consulting for organizations that do real work.",
+    "subtitle": "I am an independent consultant specialized in the social sector. I work directly with the director or operations team to understand how the organization works. I don't sell boxed software; I build solutions that adapt to your reality, not the other way around.",
+    "features": [
+      "Personalized attention without intermediaries",
+      "Specific experience in Latin American contexts",
+      "Focus on low-cost, high-scalability tools"
+    ],
+    "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80&auto=format&fit=crop",
+    "name": "Sebastián Tamayo"
+  },
+  "process": {
+    "title": "How I work",
+    "subtitle": "A structured process to guarantee measurable results.",
+    "steps": [
+      { "title": "Diagnosis", "desc": "We audit your current processes, identify bottlenecks and critical information leaks." },
+      { "title": "Design", "desc": "We design the technical architecture: data flow diagrams and selection of appropriate tools." },
+      { "title": "Development", "desc": "Iterative construction of the solution. You test each advance in real environments." },
+      { "title": "Delivery", "desc": "Team training, technical documentation and support to ensure total adoption." }
+    ]
+  },
+  "techLogos": {
+    "title": "Foundations I've worked with",
+    "items": []
+  },
+  "services": {
+    "title": "What I build",
+    "items": [
+      { "icon": "Smartphone", "title": "Mobile applications", "desc": "Field data capture for censuses or social program monitoring, even without internet connection." },
+      { "icon": "Settings", "title": "Custom internal software", "desc": "Inventory management systems, donor CRM or volunteer coordination platforms." },
+      { "icon": "BarChart3", "title": "Impact dashboards", "desc": "Automated visualization of KPIs and social impact metrics for accountability and decision making." },
+      { "icon": "Zap", "title": "Process automation", "desc": "Connecting your current tools to eliminate repetitive manual tasks and reduce human error." }
+    ],
+    "cta": "Talk about my foundation"
+  },
+  "projects": {
+    "title": "I work with them",
+    "cta": "View more"
+  },
+  "form": {
+    "title": "Is your organization ready to operate differently?",
+    "subtitle": "Fill out the form and let's analyze how technology can scale your impact.",
+    "fields": [
+      { "name": "name", "label": "Name", "type": "text", "placeholder": "Ex. Ana García" },
+      { "name": "role", "label": "Role", "type": "text", "placeholder": "Ex. Executive Director" },
+      { "name": "organization", "label": "Foundation / NGO", "type": "text", "placeholder": "Legal name" },
+      { "name": "country", "label": "Country", "type": "text", "placeholder": "Ex. Colombia" },
+      { "name": "email", "label": "Email", "type": "email", "placeholder": "ana@foundation.org" },
+      { "name": "website", "label": "Website", "type": "url", "placeholder": "https://..." },
+      { "name": "team", "label": "Team size", "type": "select", "options": ["1-10 people", "11-50 people", "51-200 people", "More than 200"] },
+      { "name": "budget", "label": "Approximate budget (USD)", "type": "select", "options": ["USD 2,000 - 5,000", "USD 5,000 - 15,000", "USD 15,000+", "To be defined"] },
+      { "name": "problem", "label": "What is the main software problem you face today?", "type": "textarea", "placeholder": "Describe the current chaos..." }
+    ],
+    "cta": "Send request",
+    "note": "I review each request personally. If there's a good starting point, I'll respond in less than 72 hours.",
+    "messages": {
+      "sending": "Sending...",
+      "success": "Sent!",
+      "successDesc": "We'll review your request and respond in less than 72 hours.",
+      "rateLimitTitle": "Limit reached",
+      "rateLimitDesc": "Too many requests. Wait 1 minute.",
+      "fieldErrorTitle": "Check the fields",
+      "fieldErrorDesc": "Some required fields are empty or invalid.",
+      "networkErrorTitle": "Network error",
+      "networkErrorDesc": "Could not send the request. Try again.",
+      "required": "This field is required",
+      "invalidEmail": "The email is not valid"
+    }
+  }
+}

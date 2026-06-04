@@ -1,0 +1,10 @@
+{
+  "logo": "Sebastián Tamayo",
+  "links": [
+    { "label": "Home", "href": "/en/" },
+    { "label": "Projects", "href": "/en/projects" },
+    { "label": "Blog", "href": "/en/blog" }
+  ],
+  "cta": "Contact",
+  "ctaHref": "/en/#contacto"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Social Impact Projects",
+  "subtitle": "Collection of technical implementations for non-profit organizations. Each project solves a real operational problem with custom software.",
+  "newsletter": {
+    "title": "Subscribe to the newsletter",
+    "subtitle": "Get the latest insights on social engineering delivered directly to your inbox.",
+    "cta": "Join Now",
+    "placeholder": "you@email.com",
+    "successMsg": "Thanks for subscribing!",
+    "errorMsg": "Something went wrong. Try again.",
+    "invalidEmailMsg": "Enter a valid email",
+    "sendingMsg": "Sending..."
+  },
+  "pagination": {
+    "prev": "Previous",
+    "next": "Next"
+  }
+}

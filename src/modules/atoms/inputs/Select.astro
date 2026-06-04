@@ -1,0 +1,20 @@
+---
+interface Props {
+  name: string;
+  options: string[];
+  required?: boolean;
+  class?: string;
+}
+
+const { name, options, required = false, class: className = "" } = Astro.props;
+---
+
+<select
+  name={name}
+  required={required}
+  class={`w-full border border-outline-variant rounded-lg focus:ring-primary focus:border-primary p-4 text-base bg-transparent ${className}`}
+>
+  {options.map(option => (
+    <option>{option}</option>
+  ))}
+</select>

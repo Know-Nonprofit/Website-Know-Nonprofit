@@ -1,0 +1,19 @@
+---
+interface Props {
+  type?: "text" | "email" | "url";
+  name: string;
+  placeholder?: string;
+  required?: boolean;
+  class?: string;
+}
+
+const { type = "text", name, placeholder = "", required = false, class: className = "" } = Astro.props;
+---
+
+<input
+  type={type}
+  name={name}
+  placeholder={placeholder}
+  required={required}
+  class={`w-full border border-outline-variant rounded-lg focus:ring-primary focus:border-primary p-4 text-base bg-transparent ${className}`}
+/>

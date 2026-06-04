@@ -1,0 +1,98 @@
+{
+  "tokens": {
+    "cta": "#C05621",
+    "quoteBg": "#ffffff"
+  },
+  "hero": {
+    "title": "Su fundación merece operar con la misma estructura que cualquier organización profesional.",
+    "subtitle": "Soy consultor independiente de desarrollo de software. Trabajo con fundaciones y ONGs en Latinoamérica para diagnosticar, diseñar y construir los sistemas que necesitan para dejar de operar en el caos.",
+    "cta": "Hablar sobre mi fundación",
+    "ctaSecondary": "Ver proyectos",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop",
+    "badge": {
+      "icon": "TrendingUp",
+      "text": "Estandarización de procesos regionales"
+    }
+  },
+  "painPoints": {
+    "title": "Si llegó hasta aquí, probablemente reconoce alguna de estas situaciones.",
+    "items": [
+      { "icon": "AlertCircle", "title": "Caos de datos", "desc": "Información fragmentada en múltiples archivos de Excel que nunca coinciden entre sí." },
+      { "icon": "TimerOff", "title": "Reportes lentos", "desc": "Días de trabajo manual solo para generar un reporte de impacto para sus donantes." },
+      { "icon": "RotateCcw", "title": "Falta de procesos", "desc": "Cada miembro del equipo tiene su propia 'manera' de guardar y procesar la información." },
+      { "icon": "TrendingDown", "title": "Crecimiento sin base", "desc": "La fundación crece en impacto pero la infraestructura administrativa está al borde del colapso." },
+      { "icon": "CreditCard", "title": "Costos técnicos", "desc": "Contratar un equipo de IT de planta es financieramente inviable para el presupuesto anual." },
+      { "icon": "Compass", "title": "Falta de guía", "desc": "Saben que necesitan tecnología, pero no saben por dónde empezar ni qué herramientas elegir." }
+    ],
+    "cta": "Hablar sobre mi fundación"
+  },
+  "valueProp": {
+    "title": "Consultoría de software para organizaciones que hacen trabajo real.",
+    "subtitle": "Soy un consultor independiente especializado en el sector social. Trabajo directamente con el director o el equipo operativo para entender cómo funciona la organización. No vendo software de caja; construyo soluciones que se adaptan a su realidad, no al revés.",
+    "features": [
+      "Atención personalizada sin intermediarios",
+      "Experiencia específica en contextos Latinoamericanos",
+      "Enfoque en herramientas de bajo costo y alta escalabilidad"
+    ],
+    "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80&auto=format&fit=crop",
+    "name": "Sebastián Tamayo"
+  },
+  "process": {
+    "title": "Cómo trabajo",
+    "subtitle": "Un proceso estructurado para garantizar resultados medibles.",
+    "steps": [
+      { "title": "Diagnóstico", "desc": "Auditamos sus procesos actuales, identificamos cuellos de botella y fugas de información crítica." },
+      { "title": "Diseño", "desc": "Diseñamos la arquitectura técnica: diagramas de flujo de datos y selección de herramientas adecuadas." },
+      { "title": "Desarrollo", "desc": "Construcción iterativa de la solución. Ustedes prueban cada avance en entornos reales." },
+      { "title": "Entrega", "desc": "Capacitación del equipo, documentación técnica y soporte para asegurar la adopción total." }
+    ]
+  },
+  "techLogos": {
+    "title": "Fundaciones con las que he trabajado",
+    "items": []
+  },
+  "services": {
+    "title": "Lo que construyo",
+    "items": [
+      { "icon": "Smartphone", "title": "Aplicaciones móviles", "desc": "Captura de datos en campo para censos o monitoreo de programas sociales, incluso sin conexión a internet." },
+      { "icon": "Settings", "title": "Software interno a medida", "desc": "Sistemas de gestión de inventarios, CRM para donantes o plataformas de coordinación de voluntarios." },
+      { "icon": "BarChart3", "title": "Dashboards de impacto", "desc": "Visualización automatizada de KPIs y métricas de impacto social para rendición de cuentas y toma de decisiones." },
+      { "icon": "Zap", "title": "Automatización de procesos", "desc": "Conexión de sus herramientas actuales para eliminar tareas manuales repetitivas y reducir el error humano." }
+    ],
+    "cta": "Hablar sobre mi fundación"
+  },
+  "projects": {
+    "title": "Trabajo con ellos",
+    "cta": "Ver más"
+  },
+  "form": {
+    "title": "¿Su organización está lista para operar diferente?",
+    "subtitle": "Complete el formulario y analicemos cómo la tecnología puede escalar su impacto.",
+    "fields": [
+      { "name": "nombre", "label": "Nombre", "type": "text", "placeholder": "Ej. Ana García" },
+      { "name": "cargo", "label": "Cargo", "type": "text", "placeholder": "Ej. Directora Ejecutiva" },
+      { "name": "fundacion", "label": "Fundación / ONG", "type": "text", "placeholder": "Nombre legal" },
+      { "name": "pais", "label": "País", "type": "text", "placeholder": "Ej. Colombia" },
+      { "name": "email", "label": "Correo electrónico", "type": "email", "placeholder": "ana@fundacion.org" },
+      { "name": "web", "label": "Sitio Web", "type": "url", "placeholder": "https://..." },
+      { "name": "equipo", "label": "Tamaño de equipo", "type": "select", "options": ["1-10 personas", "11-50 personas", "51-200 personas", "Más de 200"] },
+      { "name": "presupuesto", "label": "Presupuesto aproximado (USD)", "type": "select", "options": ["USD 2,000 - 5,000", "USD 5,000 - 15,000", "USD 15,000+", "Por definir"] },
+      { "name": "problema", "label": "¿Cuál es el principal problema de software que enfrentan hoy?", "type": "textarea", "placeholder": "Describa el caos actual..." }
+    ],
+    "cta": "Enviar solicitud",
+    "note": "Reviso cada solicitud de forma personal. Si hay un buen punto de partida, le respondo en menos de 72 horas.",
+    "messages": {
+      "sending": "Enviando...",
+      "success": "¡Enviado!",
+      "successDesc": "Revisaremos tu solicitud y responderemos en menos de 72 horas.",
+      "rateLimitTitle": "Límite alcanzado",
+      "rateLimitDesc": "Demasiadas solicitudes. Espera 1 minuto.",
+      "fieldErrorTitle": "Revisa los campos",
+      "fieldErrorDesc": "Algunos campos obligatorios están vacíos o son inválidos.",
+      "networkErrorTitle": "Error de red",
+      "networkErrorDesc": "No se pudo enviar la solicitud. Intenta de nuevo.",
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "El correo electrónico no es válido"
+    }
+  }
+}

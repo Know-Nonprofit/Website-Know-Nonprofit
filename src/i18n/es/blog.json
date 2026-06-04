@@ -1,0 +1,18 @@
+{
+  "title": "Blog de Ingeniería de Impacto Social",
+  "subtitle": "Explorando la intersección entre ingeniería de software, automatización y fiabilidad del sector social. Un viaje a través de la construcción de sistemas que importan.",
+  "newsletter": {
+    "title": "Suscríbete al newsletter",
+    "subtitle": "Recibe las últimas ideas sobre ingeniería social directamente en tu bandeja de entrada.",
+    "cta": "Únete ahora",
+    "placeholder": "tu@email.com",
+    "successMsg": "¡Gracias por suscribirte!",
+    "errorMsg": "Ocurrió un error. Intenta de nuevo.",
+    "invalidEmailMsg": "Ingresa un correo válido",
+    "sendingMsg": "Enviando..."
+  },
+  "pagination": {
+    "prev": "Anterior",
+    "next": "Siguiente"
+  }
+}

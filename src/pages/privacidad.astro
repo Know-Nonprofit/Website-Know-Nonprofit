@@ -1,0 +1,16 @@
+---
+import Base from "@layouts/Base.astro"
+import { getT } from "@lib/i18n"
+import { marked } from "marked"
+
+const t = await getT("es", "privacidad")
+const html = await marked.parse(t.content)
+---
+
+<Base title={t.pageTitle} description={t.pageDescription}>
+  <article class="py-20 bg-background">
+    <div class="max-w-[768px] mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="prose prose-lg max-w-none" set:html={html} />
+    </div>
+  </article>
+</Base>

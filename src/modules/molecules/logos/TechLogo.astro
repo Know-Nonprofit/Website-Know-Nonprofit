@@ -1,0 +1,9 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<span class="font-bold text-xl text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity">{name}</span>

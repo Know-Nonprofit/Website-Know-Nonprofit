@@ -1,17 +1,42 @@
 ---
+import Base from "@layouts/Base.astro";
+import { getT } from "@lib/i18n";
+import { mapItems } from "@lib/mappers";
+import { getCollection } from 'astro:content';
+import Hero from "@modules/organisms/hero/Hero.astro";
+import PainPoints from "@modules/organisms/pain-points/PainPoints.astro";
+import ValueProp from "@modules/organisms/value-prop/ValueProp.astro";
+import Process from "@modules/organisms/process/Process.astro";
+import TechLogos from "@modules/organisms/tech-logos/TechLogos.astro";
+import Services from "@modules/organisms/services/Services.astro";
+import Projects from "@modules/organisms/projects/Projects.astro";
+import ContactForm from "@modules/organisms/forms/ContactForm.astro";
 
+const t = await getT("es", "index");
+const steps = mapItems(t.process.steps, (item, i) => ({ ...item, number: i + 1 }));
+
+const entries = await getCollection("es/proyectos", ({ data }) => !data.draft);
+entries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const projectItems = entries.map(entry => ({
+  country: entry.data.country ?? "",
+  title: entry.data.title,
+  desc: entry.data.description,
+  image: entry.data.image ?? "",
+  link: `/proyectos/${entry.id}`,
+  cta: t.projects.cta,
+}));
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base
+  title="Sebastián Tamayo | Consultoría de Software para el Sector Social"
+  description="Consultoría de desarrollo web, transformación digital y automatización de procesos para fundaciones y ONGs en Latinoamérica."
+>
+  <Hero {...t.hero} />
+  <PainPoints {...t.painPoints} />
+  <ValueProp {...t.valueProp} />
+  <Process title={t.process.title} subtitle={t.process.subtitle} steps={steps} />
+  <TechLogos {...t.techLogos} />
+  <Services {...t.services} />
+  <Projects title={t.projects.title} items={projectItems} />
+  <ContactForm form={t.form} />
+</Base>

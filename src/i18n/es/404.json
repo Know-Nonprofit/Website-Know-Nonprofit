@@ -1,0 +1,10 @@
+{
+  "pageTitle": "Página no encontrada | SustainSoft",
+  "hero": {
+    "badge": "Error 404",
+    "title": "Página no encontrada",
+    "subtitle": "Lo sentimos, la página que está buscando no existe o ha sido movida. Por favor, regrese a la página de inicio o explore nuestros servicios.",
+    "cta": "Volver al inicio",
+    "ctaSecondary": "Ver servicios"
+  }
+}

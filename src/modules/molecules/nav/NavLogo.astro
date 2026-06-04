@@ -1,0 +1,12 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<div class={`flex items-center ${className}`}>
+  <span class="font-inter text-xl font-bold text-primary md:hidden">ST</span>
+  <span class="font-inter text-xl font-bold text-primary hidden md:inline">Sebastian Tamayo</span>
+</div>

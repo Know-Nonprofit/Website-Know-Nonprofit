@@ -1,0 +1,56 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from "@layouts/Base.astro";
+import { getT } from "@lib/i18n";
+import BlogList from "@modules/organisms/blog-list/BlogList.astro";
+import { getCollection } from 'astro:content';
+
+export const prerender = true;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return [
+    { params: { collection: 'blog' } },
+    { params: { collection: 'proyectos' } },
+  ];
+};
+
+const { collection } = Astro.params;
+
+const t = await getT("es", collection);
+
+const entries = await getCollection(`es/${collection}`, ({ data }) => !data.draft);
+entries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const pageSize = 5;
+const totalPages = Math.ceil(entries.length / pageSize);
+const page1Entries = entries.slice(0, pageSize);
+
+const items = page1Entries.map(entry => ({
+  category: entry.data.tag,
+  date: entry.data.date.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' }),
+  title: entry.data.title,
+  excerpt: entry.data.description,
+  link: `/${collection}/${entry.id}`,
+}));
+
+const pagination = {
+  currentPage: 1,
+  totalPages,
+  prevLabel: t.pagination.prev,
+  nextLabel: t.pagination.next,
+  basePath: `/${collection}`,
+};
+---
+
+<Base
+  title={`${t.title} | SustainSoft`}
+  description={t.subtitle}
+>
+  <BlogList
+    title={t.title}
+    subtitle={t.subtitle}
+    items={items}
+    newsletter={t.newsletter}
+    pagination={pagination}
+  />
+</Base>
