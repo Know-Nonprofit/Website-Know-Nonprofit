@@ -10,5 +10,5 @@ export default meta;
 type Story = StoryObj<typeof NavLogo>;
 
 export const Default: Story = {
-  args: { icon: "🏗", text: "SustainSoft" },
+  args: { icon: "🏗", text: "Sebastián Tamayo" },
 };

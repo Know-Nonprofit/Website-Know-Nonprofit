@@ -11,7 +11,7 @@ type Story = StoryObj<typeof Footer>;
 
 export const Default: Story = {
   args: {
-    brand: "SustainSoft",
+    brand: "Sebastián Tamayo",
     tagline: "Software consulting for nonprofits and social enterprises.",
     links: [
       { label: "Privacy", href: "/privacidad" },

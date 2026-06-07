@@ -14,7 +14,22 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: "es",
+        locales: {
+          es: "es-ES",
+          en: "en-US",
+        },
+      },
+      serialize: (page) => {
+        const skip = ["/api/"]
+        if (skip.some((p) => page.url.startsWith(p))) return undefined
+        return page
+      },
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()]
   }

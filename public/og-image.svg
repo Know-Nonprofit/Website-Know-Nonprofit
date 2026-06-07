@@ -2,11 +2,18 @@
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#131b2e"/>
-      <stop offset="100%" stop-color="#000000"/>
+      <stop offset="50%" stop-color="#1a2440"/>
+      <stop offset="100%" stop-color="#0d1520"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#006a61"/>
+      <stop offset="100%" stop-color="#00887c"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <text x="80" y="260" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="#ffffff">Sebastián Tamayo</text>
-  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400" fill="#7c839b">Consultoría de software para el sector social</text>
-  <text x="80" y="520" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="400" fill="#45464d">knownonprofit.tasy.work</text>
+  <rect x="0" y="0" width="6" height="630" fill="url(#accent)"/>
+  <text x="80" y="260" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Sebastián Tamayo</text>
+  <text x="80" y="320" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400" fill="#a0a8c0">Consultoría de software para el sector social</text>
+  <rect x="80" y="350" width="60" height="3" rx="1.5" fill="#006a61"/>
+  <text x="80" y="530" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="400" fill="#5a6280">knownonprofit.tasy.work</text>
 </svg>
