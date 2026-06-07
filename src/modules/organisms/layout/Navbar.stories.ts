@@ -11,7 +11,7 @@ type Story = StoryObj<typeof Navbar>;
 
 export const Default: Story = {
   args: {
-    logo: "SustainSoft",
+    logo: "Sebastián Tamayo",
     links: [
       { label: "Services", href: "#servicios" },
       { label: "Projects", href: "#proyectos" },

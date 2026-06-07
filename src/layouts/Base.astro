@@ -11,7 +11,7 @@ const locale = Astro.currentLocale ?? "es";
 const nav = await getT(locale, "nav");
 const footer = await getT(locale, "footer");
 
-const { title, description, ogType } = Astro.props;
+const { title, description, ogType, schemas: extraSchemas, ogImage: propOgImage } = Astro.props;
 
 const pageTitle = title ?? "Sebastián Tamayo"
 
@@ -36,7 +36,7 @@ const esUrl = new URL(getRelativeLocaleUrl("es", esNormSlug), Astro.url.origin).
 const enUrl = new URL(getRelativeLocaleUrl("en", enNormSlug), Astro.url.origin).href
 
 // OG image
-const ogImage = new URL("/og-image.svg", Astro.url.origin).href
+const ogImage = propOgImage ?? new URL("/og-image.svg", Astro.url.origin).href
 
 // JSON-LD
 const schemaBase = {
@@ -69,7 +69,32 @@ const personSchema = {
   ],
 }
 
-const schemas = [organizationSchema, websiteSchema, personSchema]
+const breadcrumbSchema = {
+  ...schemaBase,
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": Astro.url.origin,
+    },
+    ...Astro.url.pathname !== "/" ? [{
+      "@type": "ListItem",
+      "position": 2,
+      "name": pageTitle,
+      "item": canonical,
+    }] : [],
+  ],
+}
+
+const schemas = [
+  organizationSchema,
+  websiteSchema,
+  personSchema,
+  breadcrumbSchema,
+  ...(extraSchemas ?? []),
+]
 ---
 
 <html lang={locale}>

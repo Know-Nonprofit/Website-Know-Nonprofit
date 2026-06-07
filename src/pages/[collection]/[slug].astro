@@ -1,9 +1,24 @@
 ---
+import type { GetStaticPaths } from 'astro';
 import Base from "@layouts/Base.astro";
-import { getEntry, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import BlogMeta from "@modules/molecules/blog/BlogMeta.astro";
 import NewsletterCard from "@modules/molecules/cards/NewsletterCard.astro";
 import { getT } from "@lib/i18n";
+
+export const prerender = true;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const collections = ['blog', 'proyectos'] as const;
+  const paths = [];
+  for (const col of collections) {
+    const entries = await getCollection(`es/${col}`);
+    for (const entry of entries) {
+      paths.push({ params: { collection: col, slug: entry.id } });
+    }
+  }
+  return paths;
+};
 
 const { collection, slug } = Astro.params;
 const locale = Astro.currentLocale ?? "es";
@@ -17,9 +32,22 @@ const collectionUrl = `/${collection}`;
 ---
 
 <Base
-  title={`${entry.data.title} | SustainSoft`}
+  title={`${entry.data.title} | Sebastián Tamayo`}
   description={entry.data.description}
   ogType={collection === "blog" ? "article" : undefined}
+  schemas={collection === "blog" ? [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": entry.data.title,
+      "description": entry.data.description,
+      "datePublished": entry.data.date.toISOString(),
+      "author": {
+        "@type": "Person",
+        "name": "Sebastián Tamayo"
+      }
+    }
+  ] : undefined}
 >
   <article class="py-20 bg-background">
     <div class="max-w-[768px] mx-auto px-margin-mobile md:px-margin-desktop">
