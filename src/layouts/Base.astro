@@ -29,8 +29,14 @@ const slug = isEnPath
   : Astro.url.pathname.replace(/\/$/, "") || "/"
 const normSlug = slug === "/" ? "" : slug.replace(/^\//, "")
 
-const esNormSlug = locale === "en" ? (routes.es[normSlug] ?? normSlug) : normSlug
-const enNormSlug = locale === "es" ? (routes.en[normSlug] ?? normSlug) : normSlug
+function translateSlug(slug: string, map: Record<string, string>): string {
+  const parts = slug.split('/');
+  parts[0] = map[parts[0]] ?? parts[0];
+  return parts.join('/');
+}
+
+const esNormSlug = locale === "en" ? translateSlug(normSlug, routes.es) : normSlug
+const enNormSlug = locale === "es" ? translateSlug(normSlug, routes.en) : normSlug
 
 const esUrl = new URL(getRelativeLocaleUrl("es", esNormSlug), Astro.url.origin).href
 const enUrl = new URL(getRelativeLocaleUrl("en", enNormSlug), Astro.url.origin).href
